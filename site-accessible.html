@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre Culturel Communautaire - Accueil</title>
+
+    <!-- SEO et accessibilité -->
+    <meta name="description"
+        content="Le Centre Culturel Communautaire propose des activités artistiques, culturelles et éducatives pour tous les publics à Nancy.">
+    <meta name="keywords" content="centre culturel, activités artistiques, événements culturels, Nancy, Grand Est">
+    <meta name="author" content="Centre Culturel Communautaire de Metz">
+
+    <!-- Compatibilité navigateurs -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Accessibilité -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light dark">
+
+    <!-- Liens canoniques et alternates -->
+    <link rel="canonical" href="https://www.centreculturel.fr/">
+
+    <!-- Polices et styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Balisage Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content="Centre Culturel Communautaire - Accueil">
+    <meta property="og:description"
+        content="Le Centre Culturel Communautaire propose des activités artistiques, culturelles et éducatives pour tous les publics à Nancy.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.centreculturel.fr/">
+    <meta property="og:image" content="public\LOGO-MCL.jpg">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Centre Culturel Communautaire - Accueil">
+    <meta name="twitter:description"
+        content="Le Centre Culturel Communautaire propose des activités artistiques, culturelles et éducatives pour tous les publics à Nancy.">
+    <meta name="twitter:image" content="public\LOGO-MCL.jpg">
+    <style>
+        /* Variables CSS pour faciliter la personnalisation avec ratios de contraste vérifiés */
+        :root {
+            /* Couleurs de base avec ratios de contraste améliorés (WCAG 2.1 AA minimum) */
+            --primary-color: #0056b3;
+            /* Bleu plus foncé (5.54:1 sur blanc) */
+            --primary-dark: #00428a;
+            /* Bleu encore plus foncé (7.08:1 sur blanc) */
+            --primary-light: #e1effe;
+            /* Bleu très clair (1.25:1 sur blanc, pour fonds) */
+            --secondary-color: #b35900;
+            /* Orange plus foncé (4.55:1 sur blanc) */
+            --text-color: #212529;
+            /* Presque noir (14.2:1 sur blanc) */
+            --light-text: #fff;
+            /* Blanc (min 4.5:1 sur couleurs foncées) */
+            --background-light: #f8f9fa;
+            --focus-outline: 0.188rem solid #b35900;
+
+            /* Tailles minimales pour les interactions tactiles */
+            --min-touch-target: 2.75rem;
+            /* 44px minimum */
+            --min-touch-spacing: 0.5rem;
+            /* 8px minimum entre les éléments */
+
+            /* Espacements standardisés */
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+        }
+
+        /* Styles généraux avec focus sur l'accessibilité */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            font-size: 1rem;
+            /* Base de 16px */
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Style des liens avec focus visible */
+        a {
+            color: #ffcc00;
+            /* S'assurer que les liens ont un contraste minimum de 4.5:1 */
+            text-decoration: underline;
+            transition: color 0.3s;
+            padding: 0.125rem;
+            /* Un peu de padding pour agrandir la zone cliquable */
+        }
+
+        a:hover,
+        a:focus {
+            color: #00428a;
+            text-decoration: underline;
+        }
+
+        a:focus {
+            outline: var(--focus-outline);
+            outline-offset: 0.125rem;
+        }
+
+        /* Assurer que les liens sont suffisamment grands sur mobile */
+        a,
+        button,
+        input,
+        select,
+        textarea {
+            min-height: var(--min-touch-target);
+            min-width: var(--min-touch-target);
+        }
+
+        /* Groupes de liens - assurer suffisamment d'espace entre eux */
+        nav a,
+        .btn-group .btn {
+            margin: var(--spacing-xs);
+        }
+
+        /* Sections avec espacement approprié */
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #dee2e6;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        /* En-tête du site - avec aria-label */
+        .site-header {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: var(--spacing-md) 0;
+        }
+
+        /* Navigation principale - s'assurer qu'elle est identifiable comme landmark */
+        .main-nav {
+            background-color: var(--primary-dark);
+        }
+
+        .main-nav .navbar-nav .nav-link {
+            color: var(--light-text);
+            padding: var(--spacing-md) var(--spacing-lg);
+            text-decoration: none;
+            min-height: var(--min-touch-target);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .main-nav .navbar-nav .nav-link:hover,
+        .main-nav .navbar-nav .nav-link:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            text-decoration: underline;
+        }
+
+        .main-nav .dropdown-menu {
+            background-color: var(--primary-dark);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .main-nav .dropdown-item {
+            color: var(--light-text);
+            padding: var(--spacing-md);
+            min-height: var(--min-touch-target);
+        }
+
+        .main-nav .dropdown-item:hover,
+        .main-nav .dropdown-item:focus {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+        }
+
+        /* Style des boutons pour meilleur contraste - assurer taille suffisante */
+        .btn {
+            min-height: var(--min-touch-target);
+            min-width: var(--min-touch-target);
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--light-text);
+            font-weight: 600;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        .btn-primary:focus {
+            box-shadow: 0 0 0 0.25rem rgba(0, 86, 179, 0.5);
+            outline: var(--focus-outline);
+        }
+
+        /* Formulaires accessibles - améliorer l'espacement */
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .form-control {
+            min-height: var(--min-touch-target);
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #6c757d;
+            /* Gris plus foncé pour meilleur contraste */
+            border-radius: 0.25rem;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(0, 86, 179, 0.25);
+            outline: var(--focus-outline);
+        }
+
+        .form-label {
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            display: block;
+        }
+
+        /* Mise en évidence des erreurs de formulaire */
+        .form-control.is-invalid {
+            border-color: #b30000;
+            /* Rouge plus foncé pour meilleur contraste */
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23b30000'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23b30000' stroke='none'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right calc(0.375em + 0.1875rem) center;
+            background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+            padding-right: calc(1.5em + 0.75rem);
+        }
+
+        .invalid-feedback {
+            display: block;
+            color: #b30000;
+            /* Rouge plus foncé pour meilleur contraste (7.00:1 sur blanc) */
+            font-size: 0.875rem;
+            margin-top: var(--spacing-xs);
+            font-weight: 500;
+        }
+
+        /* Carrousel d'images accessible */
+        .carousel-control-prev,
+        .carousel-control-next {
+            min-width: var(--min-touch-target);
+            min-height: var(--min-touch-target);
+            background: rgba(0, 0, 0, 0.5);
+            /* Ajouter un fond semi-transparent pour meilleur contraste */
+        }
+
+        .carousel-control-prev:focus,
+        .carousel-control-next:focus {
+            outline: var(--focus-outline);
+        }
+
+        .carousel-indicators li {
+            min-width: 30px;
+            min-height: 10px;
+            margin: 0 var(--spacing-xs);
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Plus opaque pour meilleur contraste */
+        }
+
+        /* Tableaux accessibles */
+        .table-accessible {
+            width: 100%;
+            margin-bottom: var(--spacing-lg);
+            border-collapse: collapse;
+        }
+
+        .table-accessible caption {
+            font-weight: 700;
+            padding: var(--spacing-sm);
+            color: var(--text-color);
+            text-align: left;
+            caption-side: top;
+        }
+
+        .table-accessible th {
+            background-color: var(--primary-dark);
+            /* Plus foncé pour meilleur contraste avec le texte blanc */
+            color: var(--light-text);
+            padding: var(--spacing-md);
+            text-align: left;
+            border: 1px solid #6c757d;
+            /* Bordure plus visible */
+        }
+
+        .table-accessible td {
+            padding: var(--spacing-md);
+            border: 1px solid #6c757d;
+            /* Bordure plus visible */
+        }
+
+        .table-accessible tbody tr:nth-of-type(odd) {
+            background-color: #e9ecef;
+            /* Gris plus visible que primary-light */
+        }
+
+        /* Styles pour les cellules de tableau */
+        .table-accessible th[scope="col"],
+        .table-accessible th[scope="row"] {
+            font-weight: 700;
+        }
+
+        /* Pied de page */
+        .site-footer {
+            background-color: var(--primary-dark);
+            color: var(--light-text);
+            padding: var(--spacing-xl) 0;
+        }
+
+        .site-footer a {
+            color: #ffcc00;
+            /* Blanc pur pour contraste maximal */
+            text-decoration: underline;
+            padding: var(--spacing-xs);
+        }
+
+        .site-footer a:hover,
+        .site-footer a:focus {
+            color: #ffbb00;
+            /* Jaune pour fort contraste en mode sombre (11.6:1 sur fond bleu foncé) */
+            text-decoration: underline;
+            text-decoration-thickness: 0.15em;
+            /* Soulignement plus épais */
+        }
+
+        /* Utilitaires d'accessibilité */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Bouton "Skip to main content" */
+        .skip-link {
+            background-color: var(--primary-dark);
+            /* Plus foncé pour meilleur contraste */
+            color: var(--light-text);
+            font-weight: 700;
+            left: 50%;
+            padding: var(--spacing-sm) var(--spacing-md);
+            position: absolute;
+            transform: translateX(-50%);
+            top: -100px;
+            transition: top 0.3s;
+            z-index: 1060;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 0;
+            outline: 3px solid #ffcc00;
+            /* Contour plus visible */
+        }
+
+        /* Amélioration de la visibilité du focus pour tous les éléments interactifs */
+        :focus {
+            outline: 3px solid #ffcc00;
+            /* Jaune vif pour contour de focus (bonne visibilité sur fond clair et foncé) */
+            outline-offset: 0.125rem;
+        }
+
+        /* Meilleur contraste pour les textes sur fonds clairs */
+        .bg-light {
+            color: #212529;
+            /* Presque noir plutôt que #333 */
+            background-color: var(--background-light);
+        }
+
+        /* Mise en évidence des champs obligatoires */
+        .form-label .required-star {
+            color: #b30000;
+            /* Rouge plus foncé pour meilleur contraste (7.00:1 sur blanc) */
+            margin-left: 0.2rem;
+        }
+
+        /* Meilleur contraste pour les liens dans les textes */
+        p a,
+        li a {
+            text-decoration: underline;
+            text-decoration-thickness: 0.1em;
+            /* Soulignement plus épais */
+            font-weight: 500;
+            color: #ffcc00;
+            /* Bleu avec contraste adéquat sur fond blanc (5.54:1) */
+        }
+
+        /* Amélioration de la visibilité des éléments de navigation actifs */
+        .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            /* Plus contrasté */
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-thickness: 0.15em;
+            /* Soulignement plus épais */
+            border-bottom: 3px solid var(--light-text);
+            /* Bordure plus épaisse */
+        }
+
+        /* Amélioration de la lisibilité des tableaux */
+        .table-accessible th {
+            font-weight: 700;
+        }
+
+        /* Liens d'évitement améliorés */
+        .skip-links {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+        }
+
+        .skip-links a {
+            position: absolute;
+            top: -100px;
+            background-color: var(--primary-dark);
+            color: #ffcc00;
+            padding: var(--spacing-sm) var(--spacing-md);
+            transition: top 0.3s;
+            text-decoration: none;
+            font-weight: bold;
+            z-index: 2000;
+            border-radius: 0 0 4px 4px;
+        }
+
+        .skip-links a:focus {
+            top: 0;
+            outline: 3px solid #ffcc00;
+            /* Contour plus visible */
+        }
+
+        /* Annonces pour lecteurs d'écran */
+        #screen-reader-announcements {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Amélioration de la visibilité des messages d'erreur et de succès */
+        .alert {
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            border-radius: 0.25rem;
+            border-width: 2px;
+            /* Bordure plus épaisse */
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            border: 2px solid #155724;
+            /* Vert plus foncé pour meilleur contraste */
+            color: #155724;
+            /* Vert foncé (contraste 5.47:1 sur fond #d4edda) */
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            border: 2px solid #721c24;
+            /* Rouge plus foncé */
+            color: #721c24;
+            /* Rouge foncé (contraste 7.3:1 sur fond #f8d7da) */
+        }
+
+        .form-text {
+            margin-top: var(--spacing-xs);
+            font-size: 0.875rem;
+            color: #495057;
+            /* Gris plus foncé pour texte d'aide (4.52:1 sur blanc) */
+        }
+
+        /* Support des préférences de réduction d'animation */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+
+            .carousel-item {
+                transition: none !important;
+            }
+        }
+
+        /* Support du mode à contraste élevé */
+        @media (forced-colors: active) {
+            :root {
+                --primary-color: CanvasText;
+                --primary-dark: CanvasText;
+                --secondary-color: CanvasText;
+                --focus-outline: 0.188rem solid Highlight;
+            }
+
+            .btn-primary {
+                border: 2px solid CanvasText;
+            }
+
+            img,
+            svg {
+                forced-color-adjust: auto;
+            }
+
+            .nav-link.active {
+                border: 2px solid CanvasText;
+            }
+        }
+
+        /* Support pour l'espacement du texte amélioré */
+        .spaced-text {
+            letter-spacing: 0.12em;
+            word-spacing: 0.16em;
+            line-height: 1.8;
+        }
+
+        /* Bouton pour activer l'espacement du texte */
+        .text-spacing-toggle {
+            position: fixed;
+            bottom: 5rem;
+            right: 1.25rem;
+            z-index: 1000;
+            background-color: var(--primary-dark);
+            /* Plus foncé pour meilleur contraste */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 3.75rem;
+            height: 3.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .text-spacing-toggle:hover,
+        .text-spacing-toggle:focus {
+            background-color: #003366;
+            /* Encore plus foncé au survol/focus */
+            outline: 3px solid #ffcc00;
+            /* Contour très visible */
+        }
+
+        /* Styles pour le bouton retour en haut */
+        .back-to-top-wrapper {
+            position: fixed;
+            bottom: 5rem;
+            right: 1.25rem;
+            z-index: 1000;
+        }
+
+        .back-to-top-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Plus opaque pour meilleur contraste */
+            color: white;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .back-to-top-link span {
+            font-size: 0.7rem;
+            margin-top: 0.2rem;
+        }
+
+        .back-to-top-link.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .back-to-top-link:hover,
+        .back-to-top-link:focus {
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Presque noir au survol */
+            color: white;
+            transform: translateY(-3px);
+            outline: 3px solid #ffcc00;
+            /* Contour très visible */
+        }
+
+        /* Ajustements pour le mode sombre */
+        .dark-theme {
+            --primary-color: #60A5FF;
+            /* Bleu clair pour contraste sur fond foncé (5.5:1) */
+            --primary-dark: #80BFFF;
+            /* Bleu encore plus clair (7.0:1 sur fond foncé) */
+            --primary-light: #1A4980;
+            /* Bleu foncé pour fonds en mode sombre */
+            --text-color: #f8f9fa;
+            /* Texte presque blanc */
+            --background-dark: #121212;
+            /* Noir moins intense que pure black */
+            --background-medium: #2a2a2a;
+            /* Gris très foncé */
+            --focus-outline: 0.188rem solid #ffcc00;
+            /* Jaune vif pour visibilité maximale */
+
+            background-color: var(--background-dark);
+            color: var(--text-color);
+        }
+
+        .dark-theme a {
+            color: #ffcc00;
+            /* Bleu très clair (7.0:1 sur fond très foncé) */
+            text-decoration: underline;
+            text-decoration-thickness: 0.15em;
+            /* Soulignement plus épais en mode sombre */
+        }
+
+        .dark-theme a:hover,
+        .dark-theme a:focus {
+            color: #A6D4FF;
+            /* Bleu encore plus clair au survol (8.9:1) */
+            text-decoration: underline;
+        }
+
+        .dark-theme .bg-light {
+            background-color: var(--text-color) !important;
+            color: var(--background-medium);
+        }
+
+        .dark-theme .site-header {
+            background-color: #1A4980;
+            /* Bleu foncé pour l'en-tête en mode sombre */
+        }
+
+        .dark-theme .main-nav {
+            background-color: #0d2440;
+            /* Bleu très foncé pour la navigation */
+        }
+
+        .dark-theme .card {
+            background-color: var(--background-medium);
+            color: var(--text-color);
+            border-color: #444;
+        }
+
+        .dark-theme .form-control {
+            background-color: #333;
+            border-color: #666;
+            color: #f8f9fa;
+        }
+
+        .dark-theme .table-accessible th {
+            background-color: #0d2440;
+            /* Bleu très foncé pour les en-têtes */
+        }
+
+        .dark-theme .table-accessible tbody tr:nth-of-type(odd) {
+            background-color: #333;
+            /* Gris foncé pour les lignes alternées */
+        }
+
+        .dark-theme .table-accessible td {
+            border-color: #666;
+            /* Bordures plus visibles */
+        }
+
+        .dark-theme .alert-success {
+            background-color: #0d3a1f;
+            /* Vert très foncé */
+            color: #9be3b5;
+            /* Vert clair (7.1:1 sur fond vert foncé) */
+            border-color: #26734d;
+        }
+
+        .dark-theme .alert-danger {
+            background-color: #3d0f16;
+            /* Rouge très foncé */
+            color: #f1adb5;
+            /* Rose clair (7.0:1 sur fond rouge foncé) */
+            border-color: #842029;
+        }
+
+        .dark-theme .form-text {
+            color: #b0b5bd;
+            /* Gris clair pour texte d'aide (4.6:1 sur fond foncé) */
+        }
+
+        .dark-theme .btn-primary {
+            background-color: #3b85da;
+            /* Bleu plus vif pour boutons */
+            border-color: #60A5FF;
+        }
+
+        .dark-theme .btn-primary:hover,
+        .dark-theme .btn-primary:focus {
+            background-color: #60A5FF;
+            border-color: #80BFFF;
+        }
+
+        /* Styles pour le mode daltonien */
+        .colorblind-mode {
+            --primary-color: #0072B2;
+            /* Bleu identifiable par tous types de daltonisme (4.6:1) */
+            --primary-dark: #004e7c;
+            /* Bleu plus foncé (7.0:1) */
+            --primary-light: #e5f2ff;
+            /* Bleu très clair pour fonds */
+            --secondary-color: #CC8400;
+            /* Orange brunâtre pour contraste (4.6:1) */
+            --focus-outline: 0.188rem solid #000000;
+            /* Noir pour contraste maximal */
+            --text-color: #000000;
+            /* Noir pur pour texte */
+            --light-text: #ffffff;
+            /* Blanc pur */
+            --background-light: #f8f9fa;
+        }
+
+        .colorblind-mode a {
+            color: #ffcc00;
+            /* Bleu perceptible par tous les types de daltonisme */
+            text-decoration: underline;
+            text-decoration-thickness: 0.15em;
+            /* Soulignement plus épais */
+        }
+
+        .colorblind-mode a:hover,
+        .colorblind-mode a:focus {
+            color: #ffbb00;
+            /* Bleu plus foncé */
+            text-decoration: underline;
+            outline: 2px solid #000000;
+            /* Bordure noire visible pour tous */
+        }
+
+        .colorblind-mode .site-header {
+            background-color: #0072B2;
+        }
+
+        .colorblind-mode .main-nav {
+            background-color: #004e7c;
+        }
+
+        .colorblind-mode .btn-primary {
+            background-color: #0072B2;
+            border-color: #0072B2;
+        }
+
+        .colorblind-mode .btn-primary:hover,
+        .colorblind-mode .btn-primary:focus {
+            background-color: #004e7c;
+            border-color: #004e7c;
+            outline: 2px solid #000000;
+            /* Bordure noire visible pour tous */
+        }
+
+        .colorblind-mode .table-accessible th {
+            background-color: #004e7c;
+        }
+
+        .colorblind-mode .table-accessible tbody tr:nth-of-type(odd) {
+            background-color: #e5f2ff;
+        }
+
+        .colorblind-mode .alert-success {
+            background-color: #d8f3db;
+            color: #0a3622;
+            /* Vert très foncé pour meilleur contraste */
+            border-color: #0a3622;
+        }
+
+        .colorblind-mode .alert-danger {
+            background-color: #f8d7da;
+            color: #6d0a0a;
+            /* Rouge très foncé pour meilleur contraste */
+            border-color: #6d0a0a;
+        }
+
+        .colorblind-mode :focus {
+            outline: 3px solid #000000;
+            /* Contour noir pour visibilité maximale */
+        }
+
+        .colorblind-mode .nav-link.active {
+            border-bottom: 3px solid #ffffff;
+            background-color: rgba(0, 0, 0, 0.3);
+            /* Fond foncé pour contraste */
+        }
+
+        /* Classes pour les landmarks ARIA */
+        [role="banner"],
+        [role="navigation"],
+        [role="main"],
+        [role="complementary"],
+        [role="contentinfo"],
+        [role="search"] {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        /* Styles pour assurer la lisibilité avec des grands caractères */
+        @media screen and (min-width: 768px) {
+            body {
+                max-width: 100%;
+                line-height: 1.6;
+            }
+
+            p,
+            li {
+                max-width: 80ch;
+                /* Limite la largeur des paragraphes pour meilleure lisibilité */
+            }
+        }
+
+        /* Support de zoom jusqu'à 400% */
+        @media screen and (max-width: 400px) {
+
+            /* Styles pour s'assurer que le contenu reste accessible en zoom */
+            .container {
+                width: 100%;
+                padding-left: var(--spacing-sm);
+                padding-right: var(--spacing-sm);
+            }
+
+            /* Assurer que les menus de navigation s'adaptent */
+            .navbar-nav {
+                flex-direction: column;
+            }
+
+            /* Permettre aux tableaux de défiler horizontalement */
+            .table-responsive {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+
+        /* Styles pour les préférences de réduction de mouvement */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Lien d'évitement pour faciliter la navigation au clavier -->
+    <div class="skip-links">
+        <a href="#main-content" class="visually-hidden-focusable">Aller au contenu principal</a>
+        <a href="#mainNavigation" class="visually-hidden-focusable">Aller au menu de navigation</a>
+        <a href="#contact" class="visually-hidden-focusable">Aller au formulaire de contact</a>
+    </div>
+
+    <!-- En-tête du site -->
+    <header class="site-header" role="banner">
+        <div class="container">
+            <div class="row align-items-center py-2">
+                <div class="col-md-6">
+                    <h1><a href="#accueil" aria-label="Centre Culturel Communautaire - Retour à l'accueil"
+                            tabindex="0">Centre Culturel Communautaire</a></h1>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0" tabindex="0">Votre espace culturel accessible à tous</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation principale -->
+    <nav class="main-nav navbar navbar-expand-lg" role="navigation" aria-label="Menu principal" id="site-navigation">
+        <div class="container">
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false"
+                aria-label="Afficher le menu de navigation" tabindex="0">
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#accueil" aria-current="page" tabindex="0">Accueil</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="activitesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" tabindex="0">
+                            Activités
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="activitesDropdown">
+                            <li><a class="dropdown-item" href="#activites-culturelles" tabindex="0">Activités culturelles</a></li>
+                            <li><a class="dropdown-item" href="#ateliers" tabindex="0">Ateliers créatifs</a></li>
+                            <li><a class="dropdown-item" href="#cours" tabindex="0">Cours et formations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#programmes" tabindex="0">Programmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#evenements" tabindex="0">Événements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accessibilite" tabindex="0">Accessibilité</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" tabindex="0">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main id="main-content" role="main">
+        <!-- Section d'accueil -->
+        <section id="accueil" class="py-5" aria-labelledby="titre-accueil">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 id="titre-accueil" tabindex="0">Bienvenue dans votre centre culturel</h2>
+                        <p class="lead" tabindex="0">Un espace ouvert à tous, où la culture et l'art sont accessibles à
+                            chacun, quelles
+                            que soient ses spécificités.</p>
+                        <p tabindex="0">Notre centre culturel communautaire s'engage à promouvoir l'accès à la culture
+                            pour tous les
+                            publics. Nos installations sont conçues pour être accessibles aux personnes à mobilité
+                            réduite,
+                            et nos activités sont adaptées pour permettre à chacun d'y participer pleinement.</p>
+                        <a href="#programmes" class="btn btn-primary mt-3"
+                            aria-label="Découvrir nos programmes culturels" tabindex="0">Découvrir nos programmes</a>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <figure tabindex="0">
+                            <img src="public/EspacePrincipal.jpeg"
+                                alt="Vue intérieure du centre culturel avec des personnes participant à diverses activités"
+                                class="img-fluid rounded" width="800" height="600" tabindex="0">
+                            <figcaption class="text-center mt-2" tabindex="0">Notre espace principal accueillant
+                                diverses activités
+                                culturelles</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section Programmes -->
+        <section id="programmes" class="bg-light py-5" aria-labelledby="titre-programmes">
+            <div class="container">
+                <h2 id="titre-programmes" class="text-center mb-5" tabindex="0">Nos programmes</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100" tabindex="0">
+                            <img src="public/ArtPlasitqueMetz.jpg"
+                                alt="Groupe de personnes participant à un atelier d'arts plastiques"
+                                class="card-img-top" width="400" height="300" tabindex="0">
+                            <div class="card-body">
+                                <h3 class="card-title h5" tabindex="0">Arts et création</h3>
+                                <p class="card-text" tabindex="0">Découvrez nos ateliers d'arts plastiques, de peinture,
+                                    de sculpture
+                                    et d'artisanat, adaptés à tous les niveaux et accessibles à tous.</p>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <a href="#" class="btn btn-sm btn-primary"
+                                    aria-label="En savoir plus sur les arts et création" tabindex="0">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100" tabindex="0">
+                            <img src="public/LesMusiciensMetz.jpg"
+                                alt="Musiciens jouant ensemble des instruments variés" class="card-img-top" width="400"
+                                height="300" tabindex="0">
+                            <div class="card-body">
+                                <h3 class="card-title h5" tabindex="0">Musique et spectacles</h3>
+                                <p class="card-text" tabindex="0">Participez à nos cours de musique, nos chorales et nos
+                                    spectacles.
+                                    Des adaptations sont disponibles pour les personnes en situation de handicap.</p>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <a href="#" class="btn btn-sm btn-primary"
+                                    aria-label="En savoir plus sur la musique et les spectacles" tabindex="0">En savoir
+                                    plus</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100" tabindex="0">
+                            <img src="public/AtelierEcriture.jpg"
+                                alt="Personnes de tous âges participant à un atelier numérique" class="card-img-top"
+                                width="400" height="300" tabindex="0">
+                            <div class="card-body">
+                                <h3 class="card-title h5" tabindex="0">Littérature et numérique</h3>
+                                <p class="card-text" tabindex="0">Nos ateliers d'écriture, club de lecture et formations
+                                    au numérique
+                                    sont conçus pour être inclusifs et accessibles à tous les publics.</p>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <a href="#" class="btn btn-sm btn-primary"
+                                    aria-label="En savoir plus sur la littérature et le numérique" tabindex="0">En
+                                    savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Événements avec tableau accessible -->
+        <section id="evenements" class="py-5" aria-labelledby="titre-evenements">
+            <div class="container">
+                <h2 id="titre-evenements" class="mb-4" tabindex="0">Calendrier des événements</h2>
+                <p tabindex="0">Retrouvez ci-dessous les prochains événements organisés par notre centre culturel. Tous
+                    nos
+                    événements sont accessibles et des aménagements spécifiques peuvent être demandés à l'avance.</p>
+
+                <div class="table-responsive">
+                    <table class="table table-striped" aria-describedby="description-evenements">
+                        <caption id="description-evenements" tabindex="0">Programme des événements du mois de mai 2025
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th id="col-date" scope="col" tabindex="0">Date</th>
+                                <th id="col-evenement" scope="col" tabindex="0">Événement</th>
+                                <th id="col-horaires" scope="col" tabindex="0">Horaires</th>
+                                <th id="col-lieu" scope="col" tabindex="0">Lieu</th>
+                                <th id="col-accessibilite" scope="col" tabindex="0">Accessibilité</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td headers="col-date" tabindex="0">10 mai 2025</td>
+                                <td headers="col-evenement" tabindex="0">Exposition "Art sans frontières"</td>
+                                <td headers="col-horaires" tabindex="0">10h - 18h</td>
+                                <td headers="col-lieu" tabindex="0">Grande salle</td>
+                                <td headers="col-accessibilite">
+                                    <ul>
+                                        <li tabindex="0">Rampe d'accès</li>
+                                        <li tabindex="0">Audiodescription</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td headers="col-date" tabindex="0">15 mai 2025</td>
+                                <td headers="col-evenement" tabindex="0">Concert "Musiques du monde"</td>
+                                <td headers="col-horaires" tabindex="0">20h - 22h</td>
+                                <td headers="col-lieu" tabindex="0">Auditorium</td>
+                                <td headers="col-accessibilite">
+                                    <ul>
+                                        <li tabindex="0">Boucle magnétique</li>
+                                        <li tabindex="0">Places PMR réservées</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td headers="col-date" tabindex="0">20 mai 2025</td>
+                                <td headers="col-evenement" tabindex="0">Atelier d'écriture créative</td>
+                                <td headers="col-horaires" tabindex="0">14h - 16h</td>
+                                <td headers="col-lieu" tabindex="0">Salle B</td>
+                                <td headers="col-accessibilite">
+                                    <ul>
+                                        <li tabindex="0">Documents en grands caractères</li>
+                                        <li tabindex="0">Interprète LSF sur demande</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td headers="col-date" tabindex="0">25 mai 2025</td>
+                                <td headers="col-evenement" tabindex="0">Journée portes ouvertes</td>
+                                <td headers="col-horaires" tabindex="0">9h - 17h</td>
+                                <td headers="col-lieu" tabindex="0">Tout le centre</td>
+                                <td headers="col-accessibilite">
+                                    <ul>
+                                        <li tabindex="0">Tous espaces accessibles</li>
+                                        <li tabindex="0">Guide en FALC disponible</li>
+                                        <li tabindex="0">Interprètes LSF présents</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-3" tabindex="0"><small>Pour tout besoin spécifique d'accessibilité, n'hésitez pas à nous
+                        contacter au
+                        moins une semaine avant l'événement.</small></p>
+            </div>
+        </section>
+
+        <!-- Section Accessibilité -->
+        <section id="accessibilite" class="bg-light py-5" aria-labelledby="titre-accessibilite">
+            <div class="container">
+                <h2 id="titre-accessibilite" class="mb-4" tabindex="0">Notre démarche d'accessibilité</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3 tabindex="0">Nos engagements</h3>
+                        <p tabindex="0">Le Centre Culturel Communautaire s'engage à rendre la culture accessible à tous.
+                            Notre
+                            objectif est de permettre à chaque personne, quelle que soit sa situation, de participer
+                            pleinement à nos activités et événements.</p>
+                        <h3 tabindex="0">Nos aménagements</h3>
+                        <ul>
+                            <li tabindex="0">Bâtiment entièrement accessible aux personnes à mobilité réduite</li>
+                            <li tabindex="0">Signalétique adaptée (braille, contrastée, pictogrammes)</li>
+                            <li tabindex="0">Personnel formé à l'accueil de tous les publics</li>
+                            <li tabindex="0">Boucles magnétiques dans les salles principales</li>
+                            <li tabindex="0">Documents disponibles en formats adaptés (FALC, grands caractères, versions
+                                numériques)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 tabindex="0">Services spécifiques</h3>
+                        <p tabindex="0">Sur réservation, nous proposons également :</p>
+                        <ul>
+                            <li tabindex="0">Interprétation en langue des signes française (LSF)</li>
+                            <li tabindex="0">Audiodescription pour les expositions et spectacles</li>
+                            <li tabindex="0">Visites tactiles et sensorielles</li>
+                            <li tabindex="0">Accompagnement personnalisé</li>
+                        </ul>
+                        <figure tabindex="0">
+                            <img src="public/VisiteTactile.jpg"
+                                alt="Deux personnes découvrant à l'aveugle une sculpture en bas-relief, guidées par un médiateur"
+                                class="img-fluid rounded" width="600" height="400" tabindex="0">
+                            <figcaption class="text-center mt-2" tabindex="0">Découverte tactile d'une sculpture en bas
+                                relief dans notre centre culturel</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact avec formulaire accessible -->
+        <section id="contact" class="py-5" aria-labelledby="titre-contact">
+            <div class="container">
+                <h2 id="titre-contact" class="mb-4" tabindex="0">Contactez-nous</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p tabindex="0">Pour toute question concernant nos activités, nos événements ou vos besoins
+                            spécifiques
+                            d'accessibilité, n'hésitez pas à nous contacter via ce formulaire ou directement par
+                            téléphone.</p>
+
+                        <form id="contactForm" method="post" action="traitement.php" novalidate>
+                            <fieldset>
+                                <legend tabindex="0">Vos coordonnées</legend>
+
+                                <div class="mb-3">
+                                    <label for="nom" class="form-label" tabindex="0">Nom <span class="required-star"
+                                            aria-hidden="true">*</span><span
+                                            class="visually-hidden">(obligatoire)</span></label>
+                                    <input type="text" class="form-control" id="nom" name="nom" required
+                                        aria-required="true" aria-describedby="nomHelp nomError" tabindex="0">
+                                    <div id="nomHelp" class="form-text" tabindex="0">Entrez votre nom de famille</div>
+                                    <div id="nomError" class="invalid-feedback" aria-live="assertive"></div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="prenom" class="form-label" tabindex="0">Prénom <span
+                                            class="required-star" aria-hidden="true">*</span><span
+                                            class="visually-hidden">(obligatoire)</span></label>
+                                    <input type="text" class="form-control" id="prenom" name="prenom" required
+                                        aria-required="true" aria-describedby="prenomError" tabindex="0">
+                                    <div id="prenomError" class="invalid-feedback" aria-live="assertive"></div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label" tabindex="0">Email <span class="required-star"
+                                            aria-hidden="true">*</span><span
+                                            class="visually-hidden">(obligatoire)</span></label>
+                                    <input type="email" class="form-control" id="email" name="email" required
+                                        aria-required="true" aria-describedby="emailHelp emailError"
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" tabindex="0">
+                                    <div id="emailHelp" class="form-text" tabindex="0">Nous ne partagerons jamais votre
+                                        email avec
+                                        des tiers.</div>
+                                    <div id="emailError" class="invalid-feedback" aria-live="assertive"></div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="telephone" class="form-label" tabindex="0">Téléphone</label>
+                                    <input type="tel" class="form-control" id="telephone" name="telephone"
+                                        aria-describedby="telephoneHelp"
+                                        pattern="[0-9]{2}\s?[0-9]{2}\s?[0-9]{2}\s?[0-9]{2}\s?[0-9]{2}" tabindex="0">
+                                    <div id="telephoneHelp" class="form-text" tabindex="0">Format préféré: 01 23 45 67
+                                        89</div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend tabindex="0">Votre message</legend>
+
+                                <div class="mb-3">
+                                    <label for="sujet" class="form-label" tabindex="0">Sujet <span class="required-star"
+                                            aria-hidden="true">*</span><span
+                                            class="visually-hidden">(obligatoire)</span></label>
+                                    <select class="form-select" id="sujet" name="sujet" required aria-required="true"
+                                        aria-describedby="sujetError" tabindex="0">
+                                        <option value="">Choisissez un sujet</option>
+                                        <option value="information">Demande d'information</option>
+                                        <option value="inscription">Inscription à une activité</option>
+                                        <option value="accessibilite">Besoin spécifique d'accessibilité</option>
+                                        <option value="suggestion">Suggestion ou retour</option>
+                                        <option value="autre">Autre</option>
+                                    </select>
+                                    <div id="sujetError" class="invalid-feedback" aria-live="assertive"></div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="message" class="form-label" tabindex="0">Message <span
+                                            class="required-star" aria-hidden="true">*</span><span
+                                            class="visually-hidden">(obligatoire)</span></label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" required
+                                        aria-required="true" aria-describedby="messageError" tabindex="0"></textarea>
+                                    <div id="messageError" class="invalid-feedback" aria-live="assertive"></div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <fieldset>
+                                        <legend class="form-label" tabindex="0">Préférence de contact</legend>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="preferenceContact"
+                                                id="prefEmail" value="email" checked tabindex="0">
+                                            <label class="form-check-label" for="prefEmail" tabindex="0">
+                                                Par email
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="preferenceContact"
+                                                id="prefTelephone" value="telephone" tabindex="0">
+                                            <label class="form-check-label" for="prefTelephone" tabindex="0">
+                                                Par téléphone
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter"
+                                        tabindex="0">
+                                    <label class="form-check-label" for="newsletter" tabindex="0">Je souhaite m'abonner
+                                        à la
+                                        newsletter</label>
+                                </div>
+                            </fieldset>
+
+                            <button type="submit" class="btn btn-primary" tabindex="0">Envoyer le message</button>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <h3 tabindex="0">Informations pratiques</h3>
+                        <address tabindex="0">
+                            <strong>Centre Culturel Communautaire</strong><br>
+                            123 Avenue de la Culture<br>
+                            75000 Paris<br><br>
+                            <a href="tel:+33123456789" aria-label="Téléphone: 01 23 45 67 89" tabindex="0"><i
+                                    class="bi bi-telephone" aria-hidden="true"></i> 01 23 45 67 89</a><br>
+                            <a href="mailto:contact@centreculturel.fr" aria-label="Email: contact@centreculturel.fr"
+                                tabindex="0"><i class="bi bi-envelope" aria-hidden="true"></i>
+                                contact@centreculturel.fr</a>
+                        </address>
+
+                        <h4 tabindex="0">Horaires d'ouverture</h4>
+                        <ul class="list-unstyled">
+                            <li tabindex="0">Lundi - Vendredi : 9h - 20h</li>
+                            <li tabindex="0">Samedi : 10h - 18h</li>
+                            <li tabindex="0">Dimanche : 14h - 18h</li>
+                        </ul>
+
+                        <h4 tabindex="0">Accès</h4>
+                        <p tabindex="0">
+                            <strong>Métro :</strong> Ligne 1, station Culture<br>
+                            <strong>Bus :</strong> Lignes 42, 67, 89, arrêt Centre Culturel<br>
+                            <strong>Parking :</strong> Places PMR disponibles devant l'entrée principale
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p tabindex="0">&copy; 2025 Centre Culturel Communautaire - Tous droits réservés</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white" tabindex="0">Mentions légales</a>
+                        </li>
+                        <li class="list-inline-item"><a href="#" class="text-white" tabindex="0">Politique de
+                                confidentialité</a></li>
+                        <li class="list-inline-item"><a href="#accessibilite" class="text-white"
+                                tabindex="0">Accessibilité</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton Retour en haut -->
+        <div class="back-to-top-wrapper">
+            <a href="#" class="back-to-top-link" aria-label="Retour en haut de la page" tabindex="0" id="back-to-top">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 15l-6-6-6 6" />
+                </svg>
+                <span>Haut de page</span>
+            </a>
+        </div>
+
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Gestionnaire central des modes
+            const ModeManager = {
+                currentMode: null,
+                modes: {
+                    'default': {
+                        name: 'default',
+                        activate: function () {
+                            document.body.classList.remove('dark-theme', 'colorblind-mode');
+                            localStorage.setItem('theme', 'light');
+                            localStorage.setItem('colorblind-mode', 'false');
+                            document.documentElement.style.setProperty('--primary-color', '#2062AA');
+                            document.documentElement.style.setProperty('--primary-dark', '#174B87');
+                        }
+                    },
+                    'dark': {
+                        name: 'dark',
+                        activate: function () {
+                            document.body.classList.add('dark-theme');
+                            document.body.classList.remove('colorblind-mode');
+                            localStorage.setItem('theme', 'dark');
+                            localStorage.setItem('colorblind-mode', 'false');
+                        }
+                    },
+                    'colorblind': {
+                        name: 'colorblind',
+                        activate: function () {
+                            document.body.classList.add('colorblind-mode');
+                            document.body.classList.remove('dark-theme');
+                            localStorage.setItem('colorblind-mode', 'true');
+                            localStorage.setItem('theme', 'light');
+                        }
+                    }
+                },
+
+                init: function () {
+                    const savedTheme = localStorage.getItem('theme');
+                    const savedColorblind = localStorage.getItem('colorblind-mode');
+
+                    this.modes['default'].activate();
+
+                    if (savedColorblind === 'true') {
+                        this.setMode('colorblind');
+                    } else if (savedTheme === 'dark') {
+                        this.setMode('dark');
+                    }
+
+                    this.createModeSwitcher();
+                },
+
+                setMode: function (modeName) {
+                    if (this.modes[modeName]) {
+                        this.currentMode = modeName;
+                        this.modes[modeName].activate();
+                        this.updateModeButtons();
+
+                        const message = modeName === 'default'
+                            ? 'Mode par défaut activé'
+                            : `Mode ${modeName} activé`;
+                        createAccessibleAnnouncement(message, 'polite');
+                    }
+                },
+
+                createModeSwitcher: function () {
+                    const modeSwitcher = document.createElement('div');
+                    modeSwitcher.className = 'mode-switcher';
+                    modeSwitcher.setAttribute('aria-label', 'Sélecteur de mode d\'affichage');
+
+                    const darkButton = document.createElement('button');
+                    darkButton.className = 'mode-button dark-mode-button';
+                    darkButton.setAttribute('aria-label', 'Activer le mode sombre');
+                    darkButton.setAttribute('aria-pressed', this.currentMode === 'dark');
+                    darkButton.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"></path></svg>';
+                    darkButton.addEventListener('click', () => this.setMode('dark'));
+
+                    const colorblindButton = document.createElement('button');
+                    colorblindButton.className = 'mode-button colorblind-mode-button';
+                    colorblindButton.setAttribute('aria-label', 'Activer le mode adapté aux daltoniens');
+                    colorblindButton.setAttribute('aria-pressed', this.currentMode === 'colorblind');
+                    colorblindButton.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>';
+                    colorblindButton.addEventListener('click', () => this.setMode('colorblind'));
+
+                    const defaultButton = document.createElement('button');
+                    defaultButton.className = 'mode-button default-mode-button';
+                    defaultButton.setAttribute('aria-label', 'Activer le mode par défaut');
+                    defaultButton.setAttribute('aria-pressed', this.currentMode === 'default');
+                    defaultButton.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM12 2v2m0 16v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M2 12h2m16 0h2M6.34 17.66l-1.42 1.42M19.08 4.92l-1.42 1.42"></path></svg>';
+                    defaultButton.addEventListener('click', () => this.setMode('default'));
+
+                    modeSwitcher.appendChild(defaultButton);
+                    modeSwitcher.appendChild(darkButton);
+                    modeSwitcher.appendChild(colorblindButton);
+
+                    const headerContainer = document.querySelector('.site-header .container .row');
+                    if (headerContainer) {
+                        const modeCol = document.createElement('div');
+                        modeCol.className = 'col-auto ms-auto d-flex align-items-center';
+                        modeCol.appendChild(modeSwitcher);
+                        headerContainer.appendChild(modeCol);
+                    }
+
+                    const styleSheet = document.createElement('style');
+                    styleSheet.innerHTML = `
+                        .mode-switcher {
+                            display: flex;
+                            gap: 0.5rem;
+                            background: rgba(255, 255, 255, 0.1);
+                            padding: 0.5rem;
+                            border-radius: 2rem;
+                        }
+                        
+                        .mode-button {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            border-radius: 50%;
+                            border: none;
+                            background: transparent;
+                            color: white;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: all 0.3s ease;
+                        }
+                        
+                        .mode-button:hover, 
+                        .mode-button:focus {
+                            background: rgba(255, 255, 255, 0.2);
+                            outline: none;
+                        }
+                        
+                        .mode-button[aria-pressed="true"] {
+                            background: rgba(255, 255, 255, 0.3);
+                            box-shadow: 0 0 0 2px white;
+                        }
+                        
+                        .dark-theme .mode-button {
+                            color: var(--text-color);
+                        }
+                        
+                        .dark-theme .mode-button[aria-pressed="true"] {
+                            background: rgba(0, 0, 0, 0.3);
+                            box-shadow: 0 0 0 2px var(--text-color);
+                        }
+                        
+                        .colorblind-mode .mode-button[aria-pressed="true"] {
+                            background: #ffcc00;
+                            color: #003366;
+                            box-shadow: 0 0 0 2px #003366;
+                        }
+                    `;
+                    document.head.appendChild(styleSheet);
+                },
+
+                updateModeButtons: function () {
+                    document.querySelectorAll('.mode-button').forEach(button => {
+                        const mode = button.classList.contains('dark-mode-button') ? 'dark' :
+                            button.classList.contains('colorblind-mode-button') ? 'colorblind' : 'default';
+                        button.setAttribute('aria-pressed', this.currentMode === mode);
+                    });
+                }
+            };
+
+            // Initialiser le gestionnaire de modes
+            ModeManager.init();
+
+            // Fonction pour gérer le bouton "retour en haut"
+            function setupBackToTopButton() {
+                const backToTopButton = document.getElementById('back-to-top');
+
+                if (backToTopButton) {
+                    function toggleBackToTopButton() {
+                        if (window.scrollY > 300) {
+                            backToTopButton.classList.add('show');
+                        } else {
+                            backToTopButton.classList.remove('show');
+                        }
+                    }
+
+                    function handleTabNavigation(e) {
+                        const focusableElements = document.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex="0"]:not([tabindex="-1"])');
+                        const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+                        if (e.target === lastFocusableElement && !e.shiftKey && e.key === 'Tab') {
+                            setTimeout(() => {
+                                backToTopButton.focus();
+                            }, 10);
+                        }
+                    }
+
+                    backToTopButton.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                        createAccessibleAnnouncement('Retour en haut de page effectué', 'polite');
+                        setTimeout(() => {
+                            document.querySelector('.skip-links a').focus();
+                        }, 500);
+                    });
+
+                    backToTopButton.addEventListener('keydown', function (e) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            this.click();
+                        }
+                    });
+
+                    window.addEventListener('scroll', toggleBackToTopButton);
+                    document.addEventListener('keydown', handleTabNavigation);
+                    toggleBackToTopButton();
+                }
+            }
+
+            // Zone pour les annonces dynamiques pour les lecteurs d'écran
+            if (!document.getElementById('screen-reader-announcements')) {
+                const announcementsArea = document.createElement('div');
+                announcementsArea.id = 'screen-reader-announcements';
+                announcementsArea.className = 'sr-only';
+                announcementsArea.setAttribute('aria-live', 'polite');
+                announcementsArea.setAttribute('aria-atomic', 'true');
+                document.body.appendChild(announcementsArea);
+            }
+
+            if (!document.getElementById('a11y-announcer-assertive')) {
+                const assertiveAnnouncer = document.createElement('div');
+                assertiveAnnouncer.id = 'a11y-announcer-assertive';
+                assertiveAnnouncer.setAttribute('aria-live', 'assertive');
+                assertiveAnnouncer.setAttribute('aria-atomic', 'true');
+                assertiveAnnouncer.className = 'sr-only';
+                document.body.appendChild(assertiveAnnouncer);
+            }
+
+            // Fonction pour créer des annonces accessibles
+            function createAccessibleAnnouncement(message, type = 'polite') {
+                let announcer = document.getElementById('a11y-announcer-' + type);
+
+                if (!announcer) {
+                    announcer = document.createElement('div');
+                    announcer.id = 'a11y-announcer-' + type;
+                    announcer.setAttribute('aria-live', type);
+                    announcer.setAttribute('aria-atomic', 'true');
+                    announcer.className = 'sr-only';
+                    document.body.appendChild(announcer);
+                }
+
+                announcer.textContent = '';
+                setTimeout(() => {
+                    announcer.textContent = message;
+                }, 50);
+
+                if (type === 'assertive') {
+                    setTimeout(() => {
+                        announcer.textContent = '';
+                    }, 3000);
+                }
+            }
+
+            // Améliorer les liens d'évitement (skip links)
+            function enhanceSkipLinks() {
+                const skipLinks = document.querySelectorAll('.skip-links a');
+
+                skipLinks.forEach(link => {
+                    link.addEventListener('focus', function () {
+                        this.style.position = 'static';
+                        this.style.width = 'auto';
+                        this.style.height = 'auto';
+                        this.style.overflow = 'visible';
+                        this.style.clip = 'auto';
+                        this.style.whiteSpace = 'normal';
+                        this.style.backgroundColor = '#fff';
+                        this.style.color = '#000';
+                        this.style.padding = '1rem';
+                        this.style.zIndex = '9999';
+                        this.style.textDecoration = 'none';
+                        this.style.fontWeight = 'bold';
+                        this.style.border = '2px solid #000';
+                    });
+
+                    link.addEventListener('blur', function () {
+                        this.removeAttribute('style');
+                    });
+
+                    link.addEventListener('click', function (e) {
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+
+                        if (targetElement) {
+                            if (!targetElement.hasAttribute('tabindex')) {
+                                targetElement.setAttribute('tabindex', '-1');
+                            }
+                            targetElement.focus();
+                            createAccessibleAnnouncement('Navigation vers ' + (targetElement.getAttribute('aria-labelledby') || targetElement.textContent.trim()), 'polite');
+                        }
+                    });
+                });
+            }
+
+            // Améliorer l'accessibilité des images
+            function enhanceImageAccessibility() {
+                const images = document.querySelectorAll('img');
+
+                images.forEach(img => {
+                    if (!img.hasAttribute('alt')) {
+                        console.warn('Image sans attribut alt trouvée:', img);
+                        img.setAttribute('alt', '');
+                    }
+
+                    if (img.parentElement.tagName === 'FIGURE') {
+                        const figure = img.parentElement;
+                        const figcaption = figure.querySelector('figcaption');
+
+                        if (figcaption) {
+                            if (!figure.hasAttribute('role')) {
+                                figure.setAttribute('role', 'figure');
+                            }
+
+                            if (!figcaption.hasAttribute('id')) {
+                                const figcaptionId = 'figcaption-' + Math.random().toString(36).substring(2, 9);
+                                figcaption.setAttribute('id', figcaptionId);
+                                img.setAttribute('aria-describedby', figcaptionId);
+                            }
+                        }
+                    }
+
+                    if (img.getAttribute('alt') && img.getAttribute('alt') !== '') {
+                        if (!img.hasAttribute('tabindex')) {
+                            img.setAttribute('tabindex', '0');
+                        }
+
+                        img.addEventListener('focus', function () {
+                            createAccessibleAnnouncement('Image: ' + this.getAttribute('alt'), 'polite');
+                        });
+                    } else {
+                        img.removeAttribute('tabindex');
+                    }
+                });
+            }
+
+            // Améliorer l'accessibilité des tableaux
+            function enhanceTableAccessibility() {
+                const tables = document.querySelectorAll('table');
+
+                tables.forEach(table => {
+                    if (!table.querySelector('caption')) {
+                        console.warn('Tableau sans caption trouvé:', table);
+                    }
+
+                    const headers = table.querySelectorAll('th');
+                    headers.forEach(header => {
+                        if (!header.hasAttribute('scope')) {
+                            if (header.parentElement.tagName === 'THEAD' ||
+                                Array.from(header.parentElement.children).indexOf(header) === 0) {
+                                header.setAttribute('scope', header.parentElement.tagName === 'THEAD' ? 'col' : 'row');
+                            }
+                        }
+                    });
+
+                    if (!table.hasAttribute('tabindex')) {
+                        table.setAttribute('tabindex', '0');
+                    }
+                });
+            }
+
+            // Ajouter un indicateur de focus visible
+            function addFocusVisibility() {
+                const stylesheet = document.createElement('style');
+                stylesheet.innerHTML = `
+                    .js-focus-visible :focus:not(.focus-visible) {
+                        outline: none !important;
+                    }
+                    
+                    .js-focus-visible .focus-visible {
+                        outline: 3px solid #2196F3 !important;
+                        outline-offset: 2px !important;
+                    }
+                    
+                    [tabindex="0"] {
+                        cursor: pointer;
+                    }
+                `;
+                document.head.appendChild(stylesheet);
+
+                let isUsingKeyboard = false;
+
+                window.addEventListener('keydown', function (e) {
+                    if (e.key === 'Tab') {
+                        isUsingKeyboard = true;
+                        document.body.classList.add('keyboard-navigation');
+                    }
+                });
+
+                window.addEventListener('mousedown', function () {
+                    isUsingKeyboard = false;
+                    document.body.classList.remove('keyboard-navigation');
+                });
+
+                document.addEventListener('focusin', function (e) {
+                    if (isUsingKeyboard) {
+                        e.target.classList.add('focus-visible');
+                    }
+                });
+
+                document.addEventListener('focusout', function (e) {
+                    e.target.classList.remove('focus-visible');
+                });
+            }
+
+            // Gérer le formulaire de contact
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    let isValid = true;
+                    const requiredFields = form.querySelectorAll('[required]');
+
+                    requiredFields.forEach(field => {
+                        field.classList.remove('is-invalid');
+                        const errorElement = document.getElementById(field.id + 'Error');
+                        if (errorElement) {
+                            errorElement.textContent = '';
+                            errorElement.removeAttribute('tabindex');
+                        }
+                    });
+
+                    requiredFields.forEach(field => {
+                        if (!field.validity.valid) {
+                            isValid = false;
+                            field.classList.add('is-invalid');
+
+                            const errorElement = document.getElementById(field.id + 'Error');
+                            if (errorElement) {
+                                let errorMessage = '';
+
+                                if (field.validity.valueMissing) {
+                                    errorMessage = 'Ce champ est obligatoire.';
+                                } else if (field.validity.typeMismatch || field.validity.patternMismatch) {
+                                    errorMessage = 'Veuillez entrer une valeur valide.';
+                                }
+
+                                errorElement.textContent = errorMessage;
+                                if (errorMessage) {
+                                    errorElement.setAttribute('tabindex', '0');
+                                }
+                            }
+                        }
+                    });
+
+                    if (isValid) {
+                        const successMessage = document.createElement('div');
+                        successMessage.className = 'alert alert-success mt-3';
+                        successMessage.setAttribute('role', 'alert');
+                        successMessage.textContent = 'Merci pour votre message! Il serait envoyé si le formulaire était fonctionnel.';
+                        form.parentNode.insertBefore(successMessage, form.nextSibling);
+
+                        form.reset();
+                        successMessage.setAttribute('tabindex', '-1');
+                        successMessage.focus();
+                        createAccessibleAnnouncement('Formulaire envoyé avec succès.', 'assertive');
+
+                        setTimeout(() => {
+                            successMessage.remove();
+                        }, 5000);
+                    } else {
+                        const firstErrorElement = form.querySelector('.invalid-feedback[tabindex="0"]');
+                        if (firstErrorElement) {
+                            firstErrorElement.focus();
+                        }
+
+                        const errorArea = document.getElementById('form-errors');
+                        if (errorArea) {
+                            errorArea.textContent = 'Des erreurs ont été détectées dans le formulaire. Veuillez les corriger.';
+                        }
+
+                        createAccessibleAnnouncement('Des erreurs ont été détectées dans le formulaire. Veuillez les corriger.', 'assertive');
+                    }
+                });
+
+                const inputs = form.querySelectorAll('input, select, textarea');
+                inputs.forEach(input => {
+                    input.addEventListener('blur', function () {
+                        validateField(this);
+                    });
+
+                    input.addEventListener('input', function () {
+                        if (this.validity.valid) {
+                            const errorElement = document.getElementById(this.id + 'Error');
+                            if (errorElement) {
+                                errorElement.textContent = '';
+                                errorElement.removeAttribute('tabindex');
+                                this.classList.remove('is-invalid');
+                            }
+                        }
+                    });
+                });
+            }
+
+            function validateField(field) {
+                if (field.required && !field.validity.valid) {
+                    field.classList.add('is-invalid');
+                    const errorElement = document.getElementById(field.id + 'Error');
+                    if (errorElement) {
+                        let errorMessage = '';
+
+                        if (field.validity.valueMissing) {
+                            errorMessage = 'Ce champ est obligatoire.';
+                        } else if (field.validity.typeMismatch || field.validity.patternMismatch) {
+                            errorMessage = 'Veuillez entrer une valeur valide.';
+                        }
+
+                        errorElement.textContent = errorMessage;
+                        if (errorMessage) {
+                            errorElement.setAttribute('tabindex', '0');
+                        }
+                    }
+                }
+            }
+
+            // Amélioration de l'accessibilité pour les menus déroulants
+            // Amélioration de l'accessibilité pour les menus déroulants
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('keydown', function (e) {
+                    const dropdownMenu = this.nextElementSibling;
+
+                    if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+                        e.preventDefault();
+                        this.click(); // Ouvre le menu
+
+                        // Focus sur le premier élément du menu si ouvert
+                        if (dropdownMenu.classList.contains('show')) {
+                            const firstItem = dropdownMenu.querySelector('.dropdown-item');
+                            if (firstItem) firstItem.focus();
+                        }
+                    }
+
+                    // Navigation avec les flèches
+                    if (dropdownMenu.classList.contains('show')) {
+                        const items = dropdownMenu.querySelectorAll('.dropdown-item');
+                        const currentItem = document.activeElement;
+
+                        if (e.key === 'ArrowDown') {
+                            e.preventDefault();
+                            const nextItem = currentItem === this ? items[0] :
+                                currentItem.nextElementSibling || items[0];
+                            nextItem.focus();
+                        }
+
+                        if (e.key === 'ArrowUp') {
+                            e.preventDefault();
+                            const prevItem = currentItem.previousElementSibling ||
+                                items[items.length - 1] || this;
+                            prevItem.focus();
+                        }
+
+                        if (e.key === 'Escape') {
+                            e.preventDefault();
+                            this.focus();
+                            this.click(); // Ferme le menu
+                        }
+                    }
+                });
+
+                toggle.setAttribute('aria-haspopup', 'true');
+
+                toggle.addEventListener('click', function () {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                });
+            });
+
+            // Gestion des items du menu déroulant
+            document.querySelectorAll('.dropdown-item').forEach(item => {
+                item.addEventListener('keydown', function (e) {
+                    if (e.key === 'Tab') {
+                        const dropdown = this.closest('.dropdown');
+                        const toggle = dropdown.querySelector('.dropdown-toggle');
+                        toggle.click(); // Ferme le menu quand on tab hors du dropdown
+                    }
+                });
+            });
+
+            // Raccourcis clavier et navigation
+            window.addEventListener('keydown', function (e) {
+                if (e.altKey && e.key === '0') {
+                    e.preventDefault();
+                    const mainContent = document.getElementById('main-content');
+                    if (mainContent) {
+                        mainContent.setAttribute('tabindex', '-1');
+                        mainContent.focus();
+                        createAccessibleAnnouncement('Navigation vers le contenu principal');
+                    }
+                }
+
+                if (e.altKey && e.key === '1') {
+                    e.preventDefault();
+                    const mainNav = document.querySelector('.main-nav');
+                    if (mainNav) {
+                        mainNav.setAttribute('tabindex', '-1');
+                        mainNav.focus();
+                        createAccessibleAnnouncement('Navigation vers le menu principal');
+                    }
+                }
+
+                if (e.altKey && e.key === '2') {
+                    e.preventDefault();
+                    const contactForm = document.getElementById('contactForm');
+                    if (contactForm) {
+                        contactForm.setAttribute('tabindex', '-1');
+                        contactForm.focus();
+                        createAccessibleAnnouncement('Navigation vers le formulaire de contact');
+                    }
+                }
+
+                if (e.key === 'Escape') {
+                    const openDropdowns = document.querySelectorAll('.dropdown-menu.show');
+                    if (openDropdowns.length > 0) {
+                        openDropdowns.forEach(dropdown => {
+                            const toggle = dropdown.previousElementSibling;
+                            if (toggle && toggle.classList.contains('dropdown-toggle')) {
+                                toggle.click();
+                            }
+                        });
+                    }
+                }
+            });
+
+            // Appeler toutes les fonctions d'amélioration d'accessibilité
+            setupBackToTopButton();
+            enhanceSkipLinks();
+            enhanceImageAccessibility();
+            enhanceTableAccessibility();
+            addFocusVisibility();
+
+            // Événement pour indiquer que toutes les améliorations d'accessibilité ont été appliquées
+            document.dispatchEvent(new CustomEvent('accessibilityEnhancementsApplied'));
+
+            // Annoncer l'accessibilité améliorée au chargement initial
+            setTimeout(() => {
+                createAccessibleAnnouncement(
+                    "Page chargée avec des fonctionnalités d'accessibilité améliorées. Utilisez Tab pour naviguer, Alt+0 pour aller au contenu principal, Alt+1 pour le menu, et Alt+2 pour le formulaire de contact.",
+                    'polite'
+                );
+            }, 1000);
+        });
+
+        // Amélioration de l'accessibilité pour les menus déroulants
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    const dropdownMenu = this.nextElementSibling;
+                    if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
+                        this.click(); // Ouvre le menu
+
+                        // Focus sur le premier élément du menu si ouvert
+                        if (dropdownMenu.classList.contains('show')) {
+                            const firstItem = dropdownMenu.querySelector('.dropdown-item');
+                            if (firstItem) firstItem.focus();
+                        }
+                    }
+                }
+            });
+
+            toggle.setAttribute('aria-haspopup', 'true');
+        });
+
+        // Gestion améliorée des menus déroulants
+document.querySelectorAll('.dropdown').forEach(dropdown => {
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    const menu = dropdown.querySelector('.dropdown-menu');
+    
+    // Gestion du clavier
+    toggle.addEventListener('keydown', function(e) {
+        // Espace/Entrée/Flèche bas pour ouvrir
+        if (e.key === ' ' || e.key === 'Enter' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            this.click(); // Ouvre/ferme le menu
+            
+            // Si le menu s'ouvre, focus sur le premier élément
+            if (menu.classList.contains('show')) {
+                const firstItem = menu.querySelector('.dropdown-item');
+                if (firstItem) firstItem.focus();
+            }
+        }
+        
+        // Tabulation pour naviguer normalement
+        if (e.key === 'Tab') {
+            if (menu.classList.contains('show')) {
+                const firstItem = menu.querySelector('.dropdown-item');
+                if (firstItem) firstItem.focus();
+                e.preventDefault();
+            }
+        }
+    });
+    
+    // Gestion des items du menu
+    const items = menu.querySelectorAll('.dropdown-item');
+    items.forEach(item => {
+        item.addEventListener('keydown', function(e) {
+            // Flèche bas pour l'élément suivant
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                const nextItem = this.nextElementSibling || items[0];
+                nextItem.focus();
+            }
+            
+            // Flèche haut pour l'élément précédent
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                const prevItem = this.previousElementSibling || items[items.length - 1];
+                prevItem.focus();
+            }
+            
+            // Échap pour fermer le menu
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                toggle.focus();
+                toggle.click(); // Ferme le menu
+            }
+            
+            // Tab pour fermer le menu
+            if (e.key === 'Tab') {
+                toggle.click(); // Ferme le menu
+            }
+        });
+    });
+});
+    </script>
