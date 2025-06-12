@@ -962,7 +962,7 @@
                     </div>
                     <div class="col-lg-6 mt-4 mt-lg-0">
                         <figure tabindex="0">
-                            <img src="public/EspacePrincipal.jpeg"
+                            <img src="public\EspacePrincipal.jpeg"
                                 alt="Vue intérieure du centre culturel avec des personnes participant à diverses activités"
                                 class="img-fluid rounded" width="800" height="600" tabindex="0">
                             <figcaption class="text-center mt-2" tabindex="0">Notre espace principal accueillant
@@ -982,7 +982,7 @@
                 <div class="row">
                     <div class="col-md-4 mb-4">
                         <div class="card h-100" tabindex="0">
-                            <img src="public/ArtPlasitqueMetz.jpg"
+                            <img src="public\ArtPlasitqueMetz.jpg"
                                 alt="Groupe de personnes participant à un atelier d'arts plastiques"
                                 class="card-img-top" width="400" height="300" tabindex="0">
                             <div class="card-body">
@@ -999,7 +999,7 @@
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="card h-100" tabindex="0">
-                            <img src="public/LesMusiciensMetz.jpg"
+                            <img src="public\LesMusiciensMetz.jpg"
                                 alt="Musiciens jouant ensemble des instruments variés" class="card-img-top" width="400"
                                 height="300" tabindex="0">
                             <div class="card-body">
@@ -1017,7 +1017,7 @@
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="card h-100" tabindex="0">
-                            <img src="public/AtelierEcriture.jpg"
+                            <img src="public\AtelierEcriture.jpg"
                                 alt="Personnes de tous âges participant à un atelier numérique" class="card-img-top"
                                 width="400" height="300" tabindex="0">
                             <div class="card-body">
@@ -1149,7 +1149,7 @@
                             <li tabindex="0">Accompagnement personnalisé</li>
                         </ul>
                         <figure tabindex="0">
-                            <img src="public/VisiteTactile.jpg"
+                            <img src="public\VisiteTactile.jpg"
                                 alt="Deux personnes découvrant à l'aveugle une sculpture en bas-relief, guidées par un médiateur"
                                 class="img-fluid rounded" width="600" height="400" tabindex="0">
                             <figcaption class="text-center mt-2" tabindex="0">Découverte tactile d'une sculpture en bas
@@ -1160,248 +1160,278 @@
             </div>
         </section>
 
-     <!-- Section Contact avec formulaire accessible -->
-    <section id="contact" class="py-5" aria-labelledby="titre-contact">
-        <div class="container">
-            <h2 id="titre-contact" class="mb-4" tabindex="0">Contactez-nous</h2>
-            <div class="row">
-                <div class="col-lg-6">
-                    <p tabindex="0">Pour toute question concernant nos activités, nos événements ou vos besoins
-                        spécifiques
-                        d'accessibilité, n'hésitez pas à nous contacter via ce formulaire ou directement par
-                        téléphone.</p>
+        <!-- Section Contact avec formulaire accessible -->
+        <section id="contact" class="py-5" aria-labelledby="titre-contact">
+            <div class="container">
+                <h2 id="titre-contact" class="mb-4" tabindex="0">Contactez-nous</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p tabindex="0">Pour toute question concernant nos activités, nos événements ou vos besoins
+                            spécifiques
+                            d'accessibilité, n'hésitez pas à nous contacter via ce formulaire ou directement par
+                            téléphone.</p>
+                        <p tabindex="0">Utilisez Tab pour passer au champ suivant ou Maj+Tab pour revenir au précédent.</p>
+                        <form id="contactForm" method="post" action="traitement.php" novalidate>
+                            <fieldset>
+                                <legend tabindex="0">Vos coordonnées</legend>
 
-                    <form id="contactForm" method="post" action="traitement.php" novalidate>
-                        <fieldset>
-                            <legend tabindex="0">Vos coordonnées</legend>
-
-                            <div class="mb-3">
-                                <label for="nom" class="form-label" tabindex="0">
-                                    Nom 
-                                    <span class="required-star" aria-hidden="true">*</span>
-                                    <span class="visually-hidden">(obligatoire)</span>
-                                </label>
-                                <input type="text" 
-                                       class="form-control" 
-                                       id="nom" 
-                                       name="nom" 
-                                       required 
-                                       aria-required="true" 
-                                       aria-describedby="nom-help nomError"
-                                       maxlength="50" 
-                                       tabindex="0">
-                                <div tabindex="0" id="nom-help" class="form-text">
-                                    📝 Entrez votre nom de famille (2 à 50 caractères). 
-                                    Utilisez Tab pour passer au champ suivant ou Maj+Tab pour revenir au précédent.
+                                <div class="mb-3">
+                                    <label for="nom" class="form-label" tabindex="0">
+                                        Nom 
+                                        <span class="required-star" aria-hidden="true">*</span>
+                                        <span class="visually-hidden">(obligatoire)</span>
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="nom" 
+                                           name="nom" 
+                                           required 
+                                           aria-required="true" 
+                                           aria-describedby="nom-help nomError"
+                                           maxlength="50" 
+                                           tabindex="0">
+                                    <div tabindex="0" id="nom-help" class="form-text">
+                                        📝 Entrez votre nom de famille (2 à 50 caractères). 
+                                    </div>
+                                    <div id="nomError" class="invalid-feedback" aria-live="assertive"></div>
                                 </div>
-                                <div id="nomError" class="invalid-feedback" aria-live="assertive"></div>
-                            </div>
 
-                            <!-- Champ Prénom -->
-                            <div class="mb-3">
-                                <label for="prenom" class="form-label" tabindex="0">
-                                    Prénom 
-                                    <span class="required-star" aria-hidden="true">*</span>
-                                    <span class="visually-hidden">(obligatoire)</span>
-                                </label>
-                                <input type="text" 
-                                       class="form-control" 
-                                       id="prenom" 
-                                       name="prenom" 
-                                       required 
-                                       aria-required="true" 
-                                       aria-describedby="prenom-help prenomError"
-                                       maxlength="50" 
-                                       tabindex="0">
-                                <div tabindex="0" id="prenom-help" class="form-text">
-                                    👤 Saisissez votre prénom (2 à 50 caractères). 
-                                    Les caractères spéciaux et accents sont acceptés.
+                                <!-- Champ Prénom -->
+                                <div class="mb-3">
+                                    <label for="prenom" class="form-label" tabindex="0">
+                                        Prénom 
+                                        <span class="required-star" aria-hidden="true">*</span>
+                                        <span class="visually-hidden">(obligatoire)</span>
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="prenom" 
+                                           name="prenom" 
+                                           required 
+                                           aria-required="true" 
+                                           aria-describedby="prenom-help prenomError"
+                                           maxlength="50" 
+                                           tabindex="0">
+                                    <div tabindex="0" id="prenom-help" class="form-text">
+                                        👤 Saisissez votre prénom (2 à 50 caractères). 
+                                        Les caractères spéciaux et accents sont acceptés.
+                                    </div>
+                                    <div id="prenomError" class="invalid-feedback" aria-live="assertive"></div>
                                 </div>
-                                <div id="prenomError" class="invalid-feedback" aria-live="assertive"></div>
-                            </div>
 
-                            <!-- Champ Email -->
-                            <div class="mb-3">
-                                <label for="email" class="form-label" tabindex="0">
-                                    Email 
-                                    <span class="required-star" aria-hidden="true">*</span>
-                                    <span class="visually-hidden">(obligatoire)</span>
-                                </label>
-                                <input type="email" 
-                                       class="form-control" 
-                                       id="email" 
-                                       name="email" 
-                                       required 
-                                       aria-required="true" 
-                                       aria-describedby="email-help emailError"
-                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-                                       autocomplete="email" 
-                                       tabindex="0">
-                                <div tabindex="0" id="email-help" class="form-text">
-                                    📧 Format attendu : nom@exemple.com. 
-                                    Votre email ne sera jamais partagé avec des tiers. 
+                                <!-- Champ Email -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label" tabindex="0">
+                                        Email 
+                                        <span class="required-star" aria-hidden="true">*</span>
+                                        <span class="visually-hidden">(obligatoire)</span>
+                                    </label>
+                                    <input type="email" 
+                                           class="form-control" 
+                                           id="email" 
+                                           name="email" 
+                                           required 
+                                           aria-required="true" 
+                                           aria-describedby="email-help emailError"
+                                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                                           autocomplete="email" 
+                                           tabindex="0">
+                                    <div tabindex="0" id="email-help" class="form-text">
+                                        📧 Format attendu : nom@exemple.com
+                                        Votre email ne sera jamais partagé avec des tiers. 
+                                    </div>
+                                    <div id="emailError" class="invalid-feedback" aria-live="assertive"></div>
                                 </div>
-                                <div id="emailError" class="invalid-feedback" aria-live="assertive"></div>
-                            </div>
 
-                            <!-- Champ Téléphone -->
-                            <div class="mb-3">
-                                <label for="telephone" class="form-label" tabindex="0">Téléphone (optionnel)</label>
-                                <input type="tel" 
-                                       class="form-control" 
-                                       id="telephone" 
-                                       name="telephone"
-                                       aria-describedby="telephone-help"
-                                       pattern="[0-9\s\.\-\+\(\)]{10,}"
-                                       autocomplete="tel" 
-                                       tabindex="0">
-                                <div tabindex="0" id="telephone-help" class="form-text">
-                                    📞 Formats acceptés : 01 23 45 67 89, 01.23.45.67.89, +33 1 23 45 67 89. 
-                                    Ce champ est optionnel.
+                                <!-- Champ Téléphone -->
+                                <div class="mb-3">
+                                    <label for="telephone" class="form-label" tabindex="0">Téléphone (optionnel)</label>
+                                    <input type="tel" 
+                                           class="form-control" 
+                                           id="telephone" 
+                                           name="telephone"
+                                           aria-describedby="telephone-help"
+                                           pattern="[0-9\s\.\-\+\(\)]{10,}"
+                                           autocomplete="tel" 
+                                           tabindex="0">
+                                    <div tabindex="0" id="telephone-help" class="form-text">
+                                        📞 Formats acceptés : 01 23 45 67 89, 01.23.45.67.89, +33 1 23 45 67 89. 
+                                        Ce champ est optionnel.
+                                    </div>
                                 </div>
-                            </div>
-                        </fieldset>
+                            </fieldset>
 
-                        <!-- Section Message -->
-                        <fieldset>
-                            <legend tabindex="0">Votre message</legend>
+                            <!-- Section Message -->
+                            <fieldset>
+                                <legend tabindex="0">Votre message</legend>
 
-                            <!-- Champ Sujet -->
-                            <div class="mb-3">
-                                <label for="sujet" class="form-label" tabindex="0">
-                                    Sujet 
-                                    <span class="required-star" aria-hidden="true">*</span>
-                                    <span class="visually-hidden">(obligatoire)</span>
-                                </label>
-                                <select class="form-select" 
-                                        id="sujet" 
-                                        name="sujet" 
-                                        required 
-                                        aria-required="true"
-                                        aria-describedby="sujet-help sujetError" 
-                                        tabindex="0">
-                                    <option value="">-- Sélectionnez un sujet --</option>
-                                    <option value="information">Demande d'information générale</option>
-                                    <option value="inscription">Inscription à une activité</option>
-                                    <option value="accessibilite">Besoin spécifique d'accessibilité</option>
-                                    <option value="suggestion">Suggestion ou retour d'expérience</option>
-                                    <option value="technique">Problème technique</option>
-                                    <option value="autre">Autre sujet</option>
-                                </select>
-                                <div tabindex="0" id="sujet-help" class="form-text">
-                                    💡 Sélectionnez le sujet qui correspond le mieux à votre demande. 
-                                    Pour naviguer vous pouvez utiliser TAB et shift+TAB puis Entrée ou Espace pour cocher l'option.
+                                <!-- Champ Sujet -->
+                                <div class="mb-3">
+                                    <label for="sujet" class="form-label" tabindex="0">
+                                        Sujet 
+                                        <span class="required-star" aria-hidden="true">*</span>
+                                        <span class="visually-hidden">(obligatoire)</span>
+                                    </label>
+                                    <select class="form-select" 
+                                            id="sujet" 
+                                            name="sujet" 
+                                            required 
+                                            aria-required="true"
+                                            aria-describedby="sujet-help sujetError" 
+                                            tabindex="0">
+                                        <option value="">-- Sélectionnez un sujet --</option>
+                                        <option value="information">Demande d'information générale</option>
+                                        <option value="inscription">Inscription à une activité</option>
+                                        <option value="accessibilite">Besoin spécifique d'accessibilité</option>
+                                        <option value="suggestion">Suggestion ou retour d'expérience</option>
+                                        <option value="technique">Problème technique</option>
+                                        <option value="autre">Autre sujet</option>
+                                    </select>
+                                    <div tabindex="0" id="sujet-help" class="form-text">
+                                        💡 Sélectionnez le sujet qui correspond le mieux à votre demande. 
+                                        Pour naviguer vous pouvez utiliser les flèches directionnelles pour naviguer entres les options proposées.
+                                    </div>
+                                    <div id="sujetError" class="invalid-feedback" aria-live="assertive"></div>
                                 </div>
-                                <div id="sujetError" class="invalid-feedback" aria-live="assertive"></div>
-                            </div>
 
-                            <!-- Champ Message -->
-                            <div class="mb-3">
-                                <label for="message" class="form-label" tabindex="0">
-                                    Message 
-                                    <span class="required-star" aria-hidden="true">*</span>
-                                    <span class="visually-hidden">(obligatoire)</span>
-                                </label>
-                                <textarea class="form-control" 
-                                          id="message" 
-                                          name="message" 
-                                          rows="6" 
-                                          required 
-                                          aria-required="true" 
-                                          aria-describedby="message-help messageError"
-                                          maxlength="1000"
-                                          placeholder="Décrivez votre demande en détail..." 
-                                          tabindex="0"></textarea>
-                                <div class="char-counter" id="message-counter" aria-live="polite">
-                                    0 / 1000 caractères
+                                <!-- Champ Message -->
+                                <div class="mb-3">
+                                    <label for="message" class="form-label" tabindex="0">
+                                        Message 
+                                        <span class="required-star" aria-hidden="true">*</span>
+                                        <span class="visually-hidden">(obligatoire)</span>
+                                    </label>
+                                    <textarea class="form-control" 
+                                              id="message" 
+                                              name="message" 
+                                              rows="6" 
+                                              required 
+                                              aria-required="true" 
+                                              aria-describedby="message-help messageError"
+                                              maxlength="1000"
+                                              placeholder="Décrivez votre demande en détail..." 
+                                              tabindex="0"></textarea>
+                                    <div class="char-counter" id="message-counter" aria-live="polite">
+                                        0 / 1000 caractères
+                                    </div>
+                                    <div tabindex="0" id="message-help" class="form-text">
+                                        ✍️ Décrivez votre demande en détail (minimum 10 caractères, maximum 1000). 
+                                        Le compteur de caractères est mis à jour en temps réel.
+                                    </div>
+                                    <div id="messageError" class="invalid-feedback" aria-live="assertive"></div>
                                 </div>
-                                <div tabindex="0" id="message-help" class="form-text">
-                                    ✍️ Décrivez votre demande en détail (minimum 10 caractères, maximum 1000). 
-                                    Utilisez Ctrl+Entrée pour ajouter une nouvelle ligne. 
-                                    Le compteur de caractères est mis à jour en temps réel.
-                                </div>
-                                <div id="messageError" class="invalid-feedback" aria-live="assertive"></div>
-                            </div>
 
-                            <!-- Préférence de contact -->
-                            <div class="mb-3">
-                                <fieldset>
-                                    <legend class="form-label">Préférence de contact</legend>
-                                    <div tabindex="0" id="preference-help" class="form-text">
+                                <!-- SECTION PRÉFÉRENCE DE CONTACT AMÉLIORÉE -->
+                                <fieldset class="mb-4">
+                                    <legend class="form-label h5" id="preference-legend" tabindex="0">Préférence de contact</legend>
+                                    
+                                    <!-- Texte d'aide descriptif -->
+                                    <div id="preference-help" class="radio-help" tabindex="0">
                                         📬 Comment préférez-vous être contacté pour notre réponse ? 
-                                        Utilisez Tab/Maj+Tab pour naviguer entre les options, 
-                                        Espace ou Entrer pour sélectionner.
+                                        Utilisez les flèches ↑↓ pour changer de sélection
                                     </div>
                                     
-                                    <div tabindex="0" class="form-check mt-2">
-                                        <input class="form-check-input" 
-                                               type="radio" 
-                                               name="preferenceContact"
-                                               id="prefEmail" 
-                                               value="email" 
-                                               checked 
-                                               aria-describedby="preference-help" 
-                                               tabindex="-1">
-                                        <label class="form-check-label" for="prefEmail" tabindex="0">
-                                            Par email (recommandé)
-                                        </label>
-                                    </div>
-                                    
-                                    <div tabindex="0" class="form-check">
-                                        <input class="form-check-input" 
-                                               type="radio" 
-                                               name="preferenceContact"
-                                               id="prefTelephone" 
-                                               value="telephone" 
-                                               aria-describedby="preference-help" 
-                                               tabindex="-1">
-                                        <label class="form-check-label" for="prefTelephone" tabindex="0">
-                                            Par téléphone (si numéro fourni)
-                                        </label>
+                                    <!-- Groupe de boutons radio avec navigation optimisée -->
+                                    <div class="radio-group" 
+                                         role="radiogroup" 
+                                         aria-labelledby="preference-legend" 
+                                         aria-describedby="preference-help"
+                                         aria-required="false">
+                                        
+                                        <div class="form-check">
+                                            <!-- Input radio masqué mais fonctionnel -->
+                                            <input class="form-check-input" 
+                                                   type="radio" 
+                                                   name="preferenceContact"
+                                                   id="prefEmail" 
+                                                   value="email" 
+                                                   checked 
+                                                   tabindex="-1"
+                                                   aria-describedby="preference-help">
+                                            
+                                            <!-- Label focalisable avec role radio -->
+                                            <label class="form-check-label" 
+                                                   for="prefEmail" 
+                                                   tabindex="0"
+                                                   role="radio" 
+                                                   aria-checked="true"
+                                                   aria-describedby="preference-help">
+                                                📧 Par email (recommandé)
+                                                <span class="sr-state" aria-hidden="true">Sélectionné</span>
+                                            </label>
+                                        </div>
+                                        
+                                        <div class="form-check">
+                                            <input class="form-check-input" 
+                                                   type="radio" 
+                                                   name="preferenceContact"
+                                                   id="prefTelephone" 
+                                                   value="telephone" 
+                                                   tabindex="-1"
+                                                   aria-describedby="preference-help">
+                                            
+                                            <label class="form-check-label" 
+                                                   for="prefTelephone" 
+                                                   tabindex="-1"
+                                                   role="radio" 
+                                                   aria-checked="false"
+                                                   aria-describedby="preference-help">
+                                                📞 Par téléphone (si numéro fourni)
+                                                <span class="sr-state" aria-hidden="true">Non sélectionné</span>
+                                            </label>
+                                        </div>
+                                        
                                     </div>
                                 </fieldset>
-                            </div>
-                        </fieldset>
 
-                        <!-- Bouton d'envoi -->
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                            <button type="submit" class="btn btn-primary" aria-describedby="submit-help" tabindex="0">
-                                Envoyer le message
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                                <!-- Bouton d'envoi -->
+                                <div class="mb-3">
+                                    <div id="submit-help" class="form-text mt-2" tabindex="0">
+                                        En envoyant ce formulaire, vous acceptez d'être contacté par notre équipe 
+                                        dans les 48h ouvrées selon votre préférence de contact sélectionnée.
+                                    </div>
+                                    <button type="submit" 
+                                            class="btn btn-primary btn-lg" 
+                                            tabindex="0"
+                                            aria-describedby="submit-help">
+                                        📤 Envoyer le message
+                                    </button>
+                                </div>
 
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <h3 tabindex="0">Informations pratiques</h3>
-                    <address tabindex="0">
-                        <strong>Centre Culturel Communautaire</strong><br>
-                        123 Avenue de la Culture<br>
-                        75000 Paris<br><br>
-                        <a href="tel:+33123456789" aria-label="Téléphone: 01 23 45 67 89" tabindex="0"><i
-                                class="bi bi-telephone" aria-hidden="true"></i> 01 23 45 67 89</a><br>
-                        <a href="mailto:contact@centreculturel.fr" aria-label="Email: contact@centreculturel.fr"
-                            tabindex="0"><i class="bi bi-envelope" aria-hidden="true"></i>
-                            contact@centreculturel.fr</a>
-                    </address>
+                            </fieldset>
+                        </form>
+                    </div>
 
-                    <h4 tabindex="0">Horaires d'ouverture</h4>
-                    <ul class="list-unstyled">
-                        <li tabindex="0">Lundi - Vendredi : 9h - 20h</li>
-                        <li tabindex="0">Samedi : 10h - 18h</li>
-                        <li tabindex="0">Dimanche : 14h - 18h</li>
-                    </ul>
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <h3 tabindex="0">Informations pratiques</h3>
+                        <address tabindex="0">
+                            <strong>Centre Culturel Communautaire</strong><br>
+                            123 Avenue de la Culture<br>
+                            75000 Paris<br><br>
+                            <a style="color: #0d6efd;" href="tel:+33123456789" aria-label="Téléphone: 01 23 45 67 89" tabindex="0"><i
+                                    class="bi bi-telephone" aria-hidden="true"></i> 01 23 45 67 89</a><br>
+                            <a style="color: #0d6efd;" href="mailto:contact@centreculturel.fr" aria-label="Email: contact@centreculturel.fr"
+                                tabindex="0"><i class="bi bi-envelope" aria-hidden="true"></i>
+                                contact@centreculturel.fr</a>
+                        </address>
 
-                    <h4 tabindex="0">Accès</h4>
-                    <p tabindex="0">
-                        <strong>Métro :</strong> Ligne 1, station Culture<br>
-                        <strong>Bus :</strong> Lignes 42, 67, 89, arrêt Centre Culturel<br>
-                        <strong>Parking :</strong> Places PMR disponibles devant l'entrée principale
-                    </p>
+                        <h4 tabindex="0">Horaires d'ouverture</h4>
+                        <ul class="list-unstyled">
+                            <li tabindex="0">Lundi - Vendredi : 9h - 20h</li>
+                            <li tabindex="0">Samedi : 10h - 18h</li>
+                            <li tabindex="0">Dimanche : 14h - 18h</li>
+                        </ul>
+
+                        <h4 tabindex="0">Accès</h4>
+                        <p tabindex="0">
+                            <strong>Métro :</strong> Ligne 1, station Culture<br>
+                            <strong>Bus :</strong> Lignes 42, 67, 89, arrêt Centre Culturel<br>
+                            <strong>Parking :</strong> Places PMR disponibles devant l'entrée principale
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     </main>
 
     <footer class="bg-dark text-white py-4" role="contentinfo">
@@ -1436,6 +1466,10 @@
 
     </footer>
 
+    <!-- Zone pour les annonces aux lecteurs d'écran -->
+    <div id="announcements" aria-live="polite" aria-atomic="true" class="visually-hidden"></div>
+    <div id="announcements-assertive" aria-live="assertive" aria-atomic="true" class="visually-hidden"></div>
+
     <!-- Scripts JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -1444,6 +1478,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // === VARIABLES GLOBALES ===
     let focusHistory = [];
     let isUsingKeyboard = false;
+    let currentRadioGroupIndex = 0;
 
     // === UTILITAIRES ===
     
@@ -1568,59 +1603,152 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // === GESTION DES BOUTONS RADIO ===
+    // === GESTION OPTIMISÉE DES BOUTONS RADIO ===
     
-    function setupRadioButtons() {
-        const radioLabels = document.querySelectorAll('.form-check-label[tabindex="0"]');
+    function setupRadioButtonsOptimized() {
+        const radioGroup = document.querySelector('.radio-group[role="radiogroup"]');
+        if (!radioGroup) return;
 
-        radioLabels.forEach(label => {
-            const radioInput = document.getElementById(label.getAttribute('for'));
-
+        const radioLabels = radioGroup.querySelectorAll('.form-check-label[role="radio"]');
+        const radioInputs = radioGroup.querySelectorAll('input[type="radio"]');
+        
+        // Fonction pour mettre à jour l'état sélectionné
+        function updateRadioSelection(selectedIndex) {
+            radioLabels.forEach((label, index) => {
+                const input = radioInputs[index];
+                const srState = label.querySelector('.sr-state');
+                
+                if (index === selectedIndex) {
+                    // Sélectionner l'option
+                    input.checked = true;
+                    label.setAttribute('aria-checked', 'true');
+                    label.setAttribute('tabindex', '0');
+                    if (srState) srState.textContent = 'Sélectionné';
+                } else {
+                    // Désélectionner les autres options
+                    input.checked = false;
+                    label.setAttribute('aria-checked', 'false');
+                    label.setAttribute('tabindex', '-1');
+                    if (srState) srState.textContent = 'Non sélectionné';
+                }
+            });
+            
+            // Annoncer le changement aux lecteurs d'écran
+            const selectedLabel = radioLabels[selectedIndex];
+            const labelText = selectedLabel.textContent.replace(/Sélectionné|Non sélectionné/g, '').trim();
+            createAccessibleAnnouncement(`Option sélectionnée : ${labelText}`, 'assertive');
+            
+            // Déclencher l'événement change sur l'input radio
+            radioInputs[selectedIndex].dispatchEvent(new Event('change', { bubbles: true }));
+        }
+        
+        // Fonction pour trouver l'index de l'option actuellement sélectionnée
+        function getCurrentSelectedIndex() {
+            for (let i = 0; i < radioInputs.length; i++) {
+                if (radioInputs[i].checked) return i;
+            }
+            return 0; // Par défaut, première option
+        }
+        
+        // Initialiser l'état
+        currentRadioGroupIndex = getCurrentSelectedIndex();
+        updateRadioSelection(currentRadioGroupIndex);
+        
+        // Gestionnaire d'événements pour les labels
+        radioLabels.forEach((label, index) => {
             // Supprimer les anciens gestionnaires pour éviter les doublons
             label.removeEventListener('click', label._clickHandler);
             label.removeEventListener('keydown', label._keydownHandler);
+            label.removeEventListener('focus', label._focusHandler);
 
-            // Gestion du clic sur le label
+            // Gestion du clic
             label._clickHandler = function(e) {
                 e.preventDefault();
-                if (radioInput) {
-                    radioInput.checked = true;
-                    radioInput.dispatchEvent(new Event('change', { bubbles: true }));
-                }
+                currentRadioGroupIndex = index;
+                updateRadioSelection(currentRadioGroupIndex);
             };
             label.addEventListener('click', label._clickHandler);
 
-            // Gestion du clavier sur le label
+            // Gestion du clavier
             label._keydownHandler = function(e) {
-                if (e.key === ' ' || e.key === 'Enter') {
-                    e.preventDefault();
-                    this.click();
-                }
-
-                // Navigation avec les flèches dans le groupe radio
-                if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-                    e.preventDefault();
-                    const allLabelsInGroup = Array.from(document.querySelectorAll('label[for^="pref"]'));
-                    const currentIndex = allLabelsInGroup.indexOf(this);
-                    const nextLabel = allLabelsInGroup[currentIndex + 1] || allLabelsInGroup[0];
-                    if (nextLabel && nextLabel.hasAttribute('tabindex')) {
-                        nextLabel.focus();
-                        nextLabel.click();
-                    }
-                }
-
-                if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-                    e.preventDefault();
-                    const allLabelsInGroup = Array.from(document.querySelectorAll('label[for^="pref"]'));
-                    const currentIndex = allLabelsInGroup.indexOf(this);
-                    const prevLabel = allLabelsInGroup[currentIndex - 1] || allLabelsInGroup[allLabelsInGroup.length - 1];
-                    if (prevLabel && prevLabel.hasAttribute('tabindex')) {
-                        prevLabel.focus();
-                        prevLabel.click();
-                    }
+                switch (e.key) {
+                    case ' ':
+                    case 'Enter':
+                        e.preventDefault();
+                        currentRadioGroupIndex = index;
+                        updateRadioSelection(currentRadioGroupIndex);
+                        break;
+                        
+                    case 'ArrowDown':
+                    case 'ArrowRight':
+                        e.preventDefault();
+                        currentRadioGroupIndex = (currentRadioGroupIndex + 1) % radioLabels.length;
+                        updateRadioSelection(currentRadioGroupIndex);
+                        radioLabels[currentRadioGroupIndex].focus();
+                        break;
+                        
+                    case 'ArrowUp':
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        currentRadioGroupIndex = currentRadioGroupIndex === 0 ? 
+                            radioLabels.length - 1 : currentRadioGroupIndex - 1;
+                        updateRadioSelection(currentRadioGroupIndex);
+                        radioLabels[currentRadioGroupIndex].focus();
+                        break;
+                        
+                    case 'Home':
+                        e.preventDefault();
+                        currentRadioGroupIndex = 0;
+                        updateRadioSelection(currentRadioGroupIndex);
+                        radioLabels[currentRadioGroupIndex].focus();
+                        break;
+                        
+                    case 'End':
+                        e.preventDefault();
+                        currentRadioGroupIndex = radioLabels.length - 1;
+                        updateRadioSelection(currentRadioGroupIndex);
+                        radioLabels[currentRadioGroupIndex].focus();
+                        break;
                 }
             };
             label.addEventListener('keydown', label._keydownHandler);
+
+            // Gestion du focus
+            label._focusHandler = function() {
+                // Annoncer l'option actuellement focalisée
+                const labelText = this.textContent.replace(/Sélectionné|Non sélectionné/g, '').trim();
+                const isSelected = this.getAttribute('aria-checked') === 'true';
+                const statusText = isSelected ? 'sélectionnée' : 'non sélectionnée';
+                
+                setTimeout(() => {
+                    createAccessibleAnnouncement(
+                        `Option ${labelText}, ${statusText}. Utilisez les flèches pour naviguer, Espace pour sélectionner.`, 
+                        'polite'
+                    );
+                }, 100);
+            };
+            label.addEventListener('focus', label._focusHandler);
+        });
+
+        // Gestion spéciale de la navigation Tab depuis l'extérieur du groupe
+        radioGroup.addEventListener('focusin', function(e) {
+            if (e.target === radioLabels[0] && currentRadioGroupIndex !== 0) {
+                // Si on entre dans le groupe et que ce n'est pas la première option qui est sélectionnée,
+                // rediriger le focus vers l'option sélectionnée
+                setTimeout(() => {
+                    radioLabels[currentRadioGroupIndex].focus();
+                }, 10);
+            }
+        });
+
+        // Observer les changements sur les inputs radio (pour les changements programmatiques)
+        radioInputs.forEach((input, index) => {
+            input.addEventListener('change', function() {
+                if (this.checked) {
+                    currentRadioGroupIndex = index;
+                    updateRadioSelection(currentRadioGroupIndex);
+                }
+            });
         });
     }
 
@@ -1692,6 +1820,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 form.parentNode.insertBefore(successMessage, form.nextSibling);
 
                 form.reset();
+                
+                // Réinitialiser les boutons radio
+                setupRadioButtonsOptimized();
+                
                 successMessage.setAttribute('tabindex', '-1');
                 successMessage.focus();
                 createAccessibleAnnouncement('Formulaire envoyé avec succès.', 'assertive');
@@ -2183,7 +2315,7 @@ document.addEventListener('DOMContentLoaded', function () {
         createAnnouncementAreas();
 
         // Initialiser tous les modules
-        setupRadioButtons();
+        setupRadioButtonsOptimized();
         setupContactForm();
         ModeManager.init();
         setupBackToTopButton();
@@ -2210,3 +2342,5 @@ document.addEventListener('DOMContentLoaded', function () {
     init();
 });
     </script>
+</body>
+</html>
