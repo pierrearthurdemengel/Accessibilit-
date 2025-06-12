@@ -918,7 +918,8 @@
                             Activités
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="activitesDropdown">
-                            <li><a class="dropdown-item" href="#activites-culturelles" tabindex="0">Activités culturelles</a></li>
+                            <li><a class="dropdown-item" href="#activites-culturelles" tabindex="0">Activités
+                                    culturelles</a></li>
                             <li><a class="dropdown-item" href="#ateliers" tabindex="0">Ateliers créatifs</a></li>
                             <li><a class="dropdown-item" href="#cours" tabindex="0">Cours et formations</a></li>
                         </ul>
@@ -1159,154 +1160,248 @@
             </div>
         </section>
 
-        <!-- Section Contact avec formulaire accessible -->
-        <section id="contact" class="py-5" aria-labelledby="titre-contact">
-            <div class="container">
-                <h2 id="titre-contact" class="mb-4" tabindex="0">Contactez-nous</h2>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p tabindex="0">Pour toute question concernant nos activités, nos événements ou vos besoins
-                            spécifiques
-                            d'accessibilité, n'hésitez pas à nous contacter via ce formulaire ou directement par
-                            téléphone.</p>
+     <!-- Section Contact avec formulaire accessible -->
+    <section id="contact" class="py-5" aria-labelledby="titre-contact">
+        <div class="container">
+            <h2 id="titre-contact" class="mb-4" tabindex="0">Contactez-nous</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p tabindex="0">Pour toute question concernant nos activités, nos événements ou vos besoins
+                        spécifiques
+                        d'accessibilité, n'hésitez pas à nous contacter via ce formulaire ou directement par
+                        téléphone.</p>
 
-                        <form id="contactForm" method="post" action="traitement.php" novalidate>
-                            <fieldset>
-                                <legend tabindex="0">Vos coordonnées</legend>
+                    <form id="contactForm" method="post" action="traitement.php" novalidate>
+                        <fieldset>
+                            <legend tabindex="0">Vos coordonnées</legend>
 
-                                <div class="mb-3">
-                                    <label for="nom" class="form-label" tabindex="0">Nom <span class="required-star"
-                                            aria-hidden="true">*</span><span
-                                            class="visually-hidden">(obligatoire)</span></label>
-                                    <input type="text" class="form-control" id="nom" name="nom" required
-                                        aria-required="true" aria-describedby="nomHelp nomError" tabindex="0">
-                                    <div id="nomHelp" class="form-text" tabindex="0">Entrez votre nom de famille</div>
-                                    <div id="nomError" class="invalid-feedback" aria-live="assertive"></div>
+                            <div class="mb-3">
+                                <label for="nom" class="form-label" tabindex="0">
+                                    Nom 
+                                    <span class="required-star" aria-hidden="true">*</span>
+                                    <span class="visually-hidden">(obligatoire)</span>
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="nom" 
+                                       name="nom" 
+                                       required 
+                                       aria-required="true" 
+                                       aria-describedby="nom-help nomError"
+                                       maxlength="50" 
+                                       tabindex="0">
+                                <div tabindex="0" id="nom-help" class="form-text">
+                                    📝 Entrez votre nom de famille (2 à 50 caractères). 
+                                    Utilisez Tab pour passer au champ suivant ou Maj+Tab pour revenir au précédent.
                                 </div>
+                                <div id="nomError" class="invalid-feedback" aria-live="assertive"></div>
+                            </div>
 
-                                <div class="mb-3">
-                                    <label for="prenom" class="form-label" tabindex="0">Prénom <span
-                                            class="required-star" aria-hidden="true">*</span><span
-                                            class="visually-hidden">(obligatoire)</span></label>
-                                    <input type="text" class="form-control" id="prenom" name="prenom" required
-                                        aria-required="true" aria-describedby="prenomError" tabindex="0">
-                                    <div id="prenomError" class="invalid-feedback" aria-live="assertive"></div>
+                            <!-- Champ Prénom -->
+                            <div class="mb-3">
+                                <label for="prenom" class="form-label" tabindex="0">
+                                    Prénom 
+                                    <span class="required-star" aria-hidden="true">*</span>
+                                    <span class="visually-hidden">(obligatoire)</span>
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="prenom" 
+                                       name="prenom" 
+                                       required 
+                                       aria-required="true" 
+                                       aria-describedby="prenom-help prenomError"
+                                       maxlength="50" 
+                                       tabindex="0">
+                                <div tabindex="0" id="prenom-help" class="form-text">
+                                    👤 Saisissez votre prénom (2 à 50 caractères). 
+                                    Les caractères spéciaux et accents sont acceptés.
                                 </div>
+                                <div id="prenomError" class="invalid-feedback" aria-live="assertive"></div>
+                            </div>
 
-                                <div class="mb-3">
-                                    <label for="email" class="form-label" tabindex="0">Email <span class="required-star"
-                                            aria-hidden="true">*</span><span
-                                            class="visually-hidden">(obligatoire)</span></label>
-                                    <input type="email" class="form-control" id="email" name="email" required
-                                        aria-required="true" aria-describedby="emailHelp emailError"
-                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" tabindex="0">
-                                    <div id="emailHelp" class="form-text" tabindex="0">Nous ne partagerons jamais votre
-                                        email avec
-                                        des tiers.</div>
-                                    <div id="emailError" class="invalid-feedback" aria-live="assertive"></div>
+                            <!-- Champ Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label" tabindex="0">
+                                    Email 
+                                    <span class="required-star" aria-hidden="true">*</span>
+                                    <span class="visually-hidden">(obligatoire)</span>
+                                </label>
+                                <input type="email" 
+                                       class="form-control" 
+                                       id="email" 
+                                       name="email" 
+                                       required 
+                                       aria-required="true" 
+                                       aria-describedby="email-help emailError"
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                                       autocomplete="email" 
+                                       tabindex="0">
+                                <div tabindex="0" id="email-help" class="form-text">
+                                    📧 Format attendu : nom@exemple.com. 
+                                    Votre email ne sera jamais partagé avec des tiers. 
                                 </div>
+                                <div id="emailError" class="invalid-feedback" aria-live="assertive"></div>
+                            </div>
 
-                                <div class="mb-3">
-                                    <label for="telephone" class="form-label" tabindex="0">Téléphone</label>
-                                    <input type="tel" class="form-control" id="telephone" name="telephone"
-                                        aria-describedby="telephoneHelp"
-                                        pattern="[0-9]{2}\s?[0-9]{2}\s?[0-9]{2}\s?[0-9]{2}\s?[0-9]{2}" tabindex="0">
-                                    <div id="telephoneHelp" class="form-text" tabindex="0">Format préféré: 01 23 45 67
-                                        89</div>
+                            <!-- Champ Téléphone -->
+                            <div class="mb-3">
+                                <label for="telephone" class="form-label" tabindex="0">Téléphone (optionnel)</label>
+                                <input type="tel" 
+                                       class="form-control" 
+                                       id="telephone" 
+                                       name="telephone"
+                                       aria-describedby="telephone-help"
+                                       pattern="[0-9\s\.\-\+\(\)]{10,}"
+                                       autocomplete="tel" 
+                                       tabindex="0">
+                                <div tabindex="0" id="telephone-help" class="form-text">
+                                    📞 Formats acceptés : 01 23 45 67 89, 01.23.45.67.89, +33 1 23 45 67 89. 
+                                    Ce champ est optionnel.
                                 </div>
-                            </fieldset>
+                            </div>
+                        </fieldset>
 
-                            <fieldset>
-                                <legend tabindex="0">Votre message</legend>
+                        <!-- Section Message -->
+                        <fieldset>
+                            <legend tabindex="0">Votre message</legend>
 
-                                <div class="mb-3">
-                                    <label for="sujet" class="form-label" tabindex="0">Sujet <span class="required-star"
-                                            aria-hidden="true">*</span><span
-                                            class="visually-hidden">(obligatoire)</span></label>
-                                    <select class="form-select" id="sujet" name="sujet" required aria-required="true"
-                                        aria-describedby="sujetError" tabindex="0">
-                                        <option value="">Choisissez un sujet</option>
-                                        <option value="information">Demande d'information</option>
-                                        <option value="inscription">Inscription à une activité</option>
-                                        <option value="accessibilite">Besoin spécifique d'accessibilité</option>
-                                        <option value="suggestion">Suggestion ou retour</option>
-                                        <option value="autre">Autre</option>
-                                    </select>
-                                    <div id="sujetError" class="invalid-feedback" aria-live="assertive"></div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="message" class="form-label" tabindex="0">Message <span
-                                            class="required-star" aria-hidden="true">*</span><span
-                                            class="visually-hidden">(obligatoire)</span></label>
-                                    <textarea class="form-control" id="message" name="message" rows="5" required
-                                        aria-required="true" aria-describedby="messageError" tabindex="0"></textarea>
-                                    <div id="messageError" class="invalid-feedback" aria-live="assertive"></div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <fieldset>
-                                        <legend class="form-label" tabindex="0">Préférence de contact</legend>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="preferenceContact"
-                                                id="prefEmail" value="email" checked tabindex="0">
-                                            <label class="form-check-label" for="prefEmail" tabindex="0">
-                                                Par email
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="preferenceContact"
-                                                id="prefTelephone" value="telephone" tabindex="0">
-                                            <label class="form-check-label" for="prefTelephone" tabindex="0">
-                                                Par téléphone
-                                            </label>
-                                        </div>
-                                    </fieldset>
-                                </div>
-
-                                <div class="mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter"
+                            <!-- Champ Sujet -->
+                            <div class="mb-3">
+                                <label for="sujet" class="form-label" tabindex="0">
+                                    Sujet 
+                                    <span class="required-star" aria-hidden="true">*</span>
+                                    <span class="visually-hidden">(obligatoire)</span>
+                                </label>
+                                <select class="form-select" 
+                                        id="sujet" 
+                                        name="sujet" 
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="sujet-help sujetError" 
                                         tabindex="0">
-                                    <label class="form-check-label" for="newsletter" tabindex="0">Je souhaite m'abonner
-                                        à la
-                                        newsletter</label>
+                                    <option value="">-- Sélectionnez un sujet --</option>
+                                    <option value="information">Demande d'information générale</option>
+                                    <option value="inscription">Inscription à une activité</option>
+                                    <option value="accessibilite">Besoin spécifique d'accessibilité</option>
+                                    <option value="suggestion">Suggestion ou retour d'expérience</option>
+                                    <option value="technique">Problème technique</option>
+                                    <option value="autre">Autre sujet</option>
+                                </select>
+                                <div tabindex="0" id="sujet-help" class="form-text">
+                                    💡 Sélectionnez le sujet qui correspond le mieux à votre demande. 
+                                    Pour naviguer vous pouvez utiliser TAB et shift+TAB puis Entrée ou Espace pour cocher l'option.
                                 </div>
-                            </fieldset>
+                                <div id="sujetError" class="invalid-feedback" aria-live="assertive"></div>
+                            </div>
 
-                            <button type="submit" class="btn btn-primary" tabindex="0">Envoyer le message</button>
-                        </form>
-                    </div>
+                            <!-- Champ Message -->
+                            <div class="mb-3">
+                                <label for="message" class="form-label" tabindex="0">
+                                    Message 
+                                    <span class="required-star" aria-hidden="true">*</span>
+                                    <span class="visually-hidden">(obligatoire)</span>
+                                </label>
+                                <textarea class="form-control" 
+                                          id="message" 
+                                          name="message" 
+                                          rows="6" 
+                                          required 
+                                          aria-required="true" 
+                                          aria-describedby="message-help messageError"
+                                          maxlength="1000"
+                                          placeholder="Décrivez votre demande en détail..." 
+                                          tabindex="0"></textarea>
+                                <div class="char-counter" id="message-counter" aria-live="polite">
+                                    0 / 1000 caractères
+                                </div>
+                                <div tabindex="0" id="message-help" class="form-text">
+                                    ✍️ Décrivez votre demande en détail (minimum 10 caractères, maximum 1000). 
+                                    Utilisez Ctrl+Entrée pour ajouter une nouvelle ligne. 
+                                    Le compteur de caractères est mis à jour en temps réel.
+                                </div>
+                                <div id="messageError" class="invalid-feedback" aria-live="assertive"></div>
+                            </div>
 
-                    <div class="col-lg-6 mt-4 mt-lg-0">
-                        <h3 tabindex="0">Informations pratiques</h3>
-                        <address tabindex="0">
-                            <strong>Centre Culturel Communautaire</strong><br>
-                            123 Avenue de la Culture<br>
-                            75000 Paris<br><br>
-                            <a href="tel:+33123456789" aria-label="Téléphone: 01 23 45 67 89" tabindex="0"><i
-                                    class="bi bi-telephone" aria-hidden="true"></i> 01 23 45 67 89</a><br>
-                            <a href="mailto:contact@centreculturel.fr" aria-label="Email: contact@centreculturel.fr"
-                                tabindex="0"><i class="bi bi-envelope" aria-hidden="true"></i>
-                                contact@centreculturel.fr</a>
-                        </address>
+                            <!-- Préférence de contact -->
+                            <div class="mb-3">
+                                <fieldset>
+                                    <legend class="form-label">Préférence de contact</legend>
+                                    <div tabindex="0" id="preference-help" class="form-text">
+                                        📬 Comment préférez-vous être contacté pour notre réponse ? 
+                                        Utilisez Tab/Maj+Tab pour naviguer entre les options, 
+                                        Espace ou Entrer pour sélectionner.
+                                    </div>
+                                    
+                                    <div tabindex="0" class="form-check mt-2">
+                                        <input class="form-check-input" 
+                                               type="radio" 
+                                               name="preferenceContact"
+                                               id="prefEmail" 
+                                               value="email" 
+                                               checked 
+                                               aria-describedby="preference-help" 
+                                               tabindex="-1">
+                                        <label class="form-check-label" for="prefEmail" tabindex="0">
+                                            Par email (recommandé)
+                                        </label>
+                                    </div>
+                                    
+                                    <div tabindex="0" class="form-check">
+                                        <input class="form-check-input" 
+                                               type="radio" 
+                                               name="preferenceContact"
+                                               id="prefTelephone" 
+                                               value="telephone" 
+                                               aria-describedby="preference-help" 
+                                               tabindex="-1">
+                                        <label class="form-check-label" for="prefTelephone" tabindex="0">
+                                            Par téléphone (si numéro fourni)
+                                        </label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </fieldset>
 
-                        <h4 tabindex="0">Horaires d'ouverture</h4>
-                        <ul class="list-unstyled">
-                            <li tabindex="0">Lundi - Vendredi : 9h - 20h</li>
-                            <li tabindex="0">Samedi : 10h - 18h</li>
-                            <li tabindex="0">Dimanche : 14h - 18h</li>
-                        </ul>
+                        <!-- Bouton d'envoi -->
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                            <button type="submit" class="btn btn-primary" aria-describedby="submit-help" tabindex="0">
+                                Envoyer le message
+                            </button>
+                        </div>
+                    </form>
+                </div>
 
-                        <h4 tabindex="0">Accès</h4>
-                        <p tabindex="0">
-                            <strong>Métro :</strong> Ligne 1, station Culture<br>
-                            <strong>Bus :</strong> Lignes 42, 67, 89, arrêt Centre Culturel<br>
-                            <strong>Parking :</strong> Places PMR disponibles devant l'entrée principale
-                        </p>
-                    </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <h3 tabindex="0">Informations pratiques</h3>
+                    <address tabindex="0">
+                        <strong>Centre Culturel Communautaire</strong><br>
+                        123 Avenue de la Culture<br>
+                        75000 Paris<br><br>
+                        <a href="tel:+33123456789" aria-label="Téléphone: 01 23 45 67 89" tabindex="0"><i
+                                class="bi bi-telephone" aria-hidden="true"></i> 01 23 45 67 89</a><br>
+                        <a href="mailto:contact@centreculturel.fr" aria-label="Email: contact@centreculturel.fr"
+                            tabindex="0"><i class="bi bi-envelope" aria-hidden="true"></i>
+                            contact@centreculturel.fr</a>
+                    </address>
+
+                    <h4 tabindex="0">Horaires d'ouverture</h4>
+                    <ul class="list-unstyled">
+                        <li tabindex="0">Lundi - Vendredi : 9h - 20h</li>
+                        <li tabindex="0">Samedi : 10h - 18h</li>
+                        <li tabindex="0">Dimanche : 14h - 18h</li>
+                    </ul>
+
+                    <h4 tabindex="0">Accès</h4>
+                    <p tabindex="0">
+                        <strong>Métro :</strong> Ligne 1, station Culture<br>
+                        <strong>Bus :</strong> Lignes 42, 67, 89, arrêt Centre Culturel<br>
+                        <strong>Parking :</strong> Places PMR disponibles devant l'entrée principale
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     </main>
 
     <footer class="bg-dark text-white py-4" role="contentinfo">
@@ -1344,735 +1439,774 @@
     <!-- Scripts JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Gestionnaire central des modes
-            const ModeManager = {
-                currentMode: null,
-                modes: {
-                    'default': {
-                        name: 'default',
-                        activate: function () {
-                            document.body.classList.remove('dark-theme', 'colorblind-mode');
-                            localStorage.setItem('theme', 'light');
-                            localStorage.setItem('colorblind-mode', 'false');
-                            document.documentElement.style.setProperty('--primary-color', '#2062AA');
-                            document.documentElement.style.setProperty('--primary-dark', '#174B87');
-                        }
-                    },
-                    'dark': {
-                        name: 'dark',
-                        activate: function () {
-                            document.body.classList.add('dark-theme');
-                            document.body.classList.remove('colorblind-mode');
-                            localStorage.setItem('theme', 'dark');
-                            localStorage.setItem('colorblind-mode', 'false');
-                        }
-                    },
-                    'colorblind': {
-                        name: 'colorblind',
-                        activate: function () {
-                            document.body.classList.add('colorblind-mode');
-                            document.body.classList.remove('dark-theme');
-                            localStorage.setItem('colorblind-mode', 'true');
-                            localStorage.setItem('theme', 'light');
-                        }
-                    }
-                },
+document.addEventListener('DOMContentLoaded', function () {
+    
+    // === VARIABLES GLOBALES ===
+    let focusHistory = [];
+    let isUsingKeyboard = false;
 
-                init: function () {
-                    const savedTheme = localStorage.getItem('theme');
-                    const savedColorblind = localStorage.getItem('colorblind-mode');
+    // === UTILITAIRES ===
+    
+    // Zone pour les annonces dynamiques pour les lecteurs d'écran
+    function createAnnouncementAreas() {
+        if (!document.getElementById('screen-reader-announcements')) {
+            const announcementsArea = document.createElement('div');
+            announcementsArea.id = 'screen-reader-announcements';
+            announcementsArea.className = 'sr-only';
+            announcementsArea.setAttribute('aria-live', 'polite');
+            announcementsArea.setAttribute('aria-atomic', 'true');
+            document.body.appendChild(announcementsArea);
+        }
 
-                    this.modes['default'].activate();
+        if (!document.getElementById('a11y-announcer-assertive')) {
+            const assertiveAnnouncer = document.createElement('div');
+            assertiveAnnouncer.id = 'a11y-announcer-assertive';
+            assertiveAnnouncer.setAttribute('aria-live', 'assertive');
+            assertiveAnnouncer.setAttribute('aria-atomic', 'true');
+            assertiveAnnouncer.className = 'sr-only';
+            document.body.appendChild(assertiveAnnouncer);
+        }
+    }
 
-                    if (savedColorblind === 'true') {
-                        this.setMode('colorblind');
-                    } else if (savedTheme === 'dark') {
-                        this.setMode('dark');
-                    }
+    // Fonction pour créer des annonces accessibles
+    function createAccessibleAnnouncement(message, type = 'polite') {
+        let announcer = document.getElementById('a11y-announcer-' + type);
 
-                    this.createModeSwitcher();
-                },
+        if (!announcer) {
+            announcer = document.createElement('div');
+            announcer.id = 'a11y-announcer-' + type;
+            announcer.setAttribute('aria-live', type);
+            announcer.setAttribute('aria-atomic', 'true');
+            announcer.className = 'sr-only';
+            document.body.appendChild(announcer);
+        }
 
-                setMode: function (modeName) {
-                    if (this.modes[modeName]) {
-                        this.currentMode = modeName;
-                        this.modes[modeName].activate();
-                        this.updateModeButtons();
+        announcer.textContent = '';
+        setTimeout(() => {
+            announcer.textContent = message;
+        }, 50);
 
-                        const message = modeName === 'default'
-                            ? 'Mode par défaut activé'
-                            : `Mode ${modeName} activé`;
-                        createAccessibleAnnouncement(message, 'polite');
-                    }
-                },
+        if (type === 'assertive') {
+            setTimeout(() => {
+                announcer.textContent = '';
+            }, 3000);
+        }
+    }
 
-                createModeSwitcher: function () {
-                    const modeSwitcher = document.createElement('div');
-                    modeSwitcher.className = 'mode-switcher';
-                    modeSwitcher.setAttribute('aria-label', 'Sélecteur de mode d\'affichage');
+    // === GESTION DES ERREURS DE FORMULAIRE ===
+    
+    // Fonction pour rendre un message d'erreur focalisable et gérer la navigation
+    function makeErrorMessageFocusable(errorElement, fieldId) {
+        if (!errorElement || !errorElement.textContent.trim()) return;
+        
+        // Rendre l'élément focalisable
+        errorElement.setAttribute('tabindex', '0');
+        
+        // Supprimer les anciens gestionnaires d'événements pour éviter les doublons
+        errorElement.removeEventListener('keydown', errorElement._keydownHandler);
+        errorElement.removeEventListener('focus', errorElement._focusHandler);
+        errorElement.removeEventListener('blur', errorElement._blurHandler);
+        
+        // Ajouter la gestion des événements clavier
+        errorElement._keydownHandler = function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                // Retourner au champ correspondant
+                const field = document.getElementById(fieldId);
+                if (field) {
+                    field.focus();
+                }
+            }
+            
+            // Gestion de la touche TAB pour redirection automatique vers le champ
+            if (e.key === 'Tab') {
+                e.preventDefault();
+                const field = document.getElementById(fieldId);
+                if (field) {
+                    field.focus();
+                    // Annoncer la redirection pour les lecteurs d'écran
+                    createAccessibleAnnouncement(`Redirection vers le champ ${field.labels ? field.labels[0].textContent : fieldId}`, 'polite');
+                }
+            }
+        };
+        errorElement.addEventListener('keydown', errorElement._keydownHandler);
+        
+        // Améliorer l'indication visuelle au focus
+        errorElement._focusHandler = function() {
+            this.style.outline = '2px solid #dc3545';
+            this.style.outlineOffset = '2px';
+        };
+        errorElement.addEventListener('focus', errorElement._focusHandler);
+        
+        errorElement._blurHandler = function() {
+            this.style.outline = '';
+            this.style.outlineOffset = '';
+        };
+        errorElement.addEventListener('blur', errorElement._blurHandler);
+    }
+    
+    // Fonction pour rendre un message d'erreur non-focalisable
+    function makeErrorMessageNonFocusable(errorElement) {
+        if (!errorElement) return;
+        
+        errorElement.removeAttribute('tabindex');
+        errorElement.style.outline = '';
+        errorElement.style.outlineOffset = '';
+        
+        // Supprimer les gestionnaires d'événements
+        if (errorElement._keydownHandler) {
+            errorElement.removeEventListener('keydown', errorElement._keydownHandler);
+            delete errorElement._keydownHandler;
+        }
+        if (errorElement._focusHandler) {
+            errorElement.removeEventListener('focus', errorElement._focusHandler);
+            delete errorElement._focusHandler;
+        }
+        if (errorElement._blurHandler) {
+            errorElement.removeEventListener('blur', errorElement._blurHandler);
+            delete errorElement._blurHandler;
+        }
+    }
 
-                    const darkButton = document.createElement('button');
-                    darkButton.className = 'mode-button dark-mode-button';
-                    darkButton.setAttribute('aria-label', 'Activer le mode sombre');
-                    darkButton.setAttribute('aria-pressed', this.currentMode === 'dark');
-                    darkButton.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"></path></svg>';
-                    darkButton.addEventListener('click', () => this.setMode('dark'));
+    // === GESTION DES BOUTONS RADIO ===
+    
+    function setupRadioButtons() {
+        const radioLabels = document.querySelectorAll('.form-check-label[tabindex="0"]');
 
-                    const colorblindButton = document.createElement('button');
-                    colorblindButton.className = 'mode-button colorblind-mode-button';
-                    colorblindButton.setAttribute('aria-label', 'Activer le mode adapté aux daltoniens');
-                    colorblindButton.setAttribute('aria-pressed', this.currentMode === 'colorblind');
-                    colorblindButton.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>';
-                    colorblindButton.addEventListener('click', () => this.setMode('colorblind'));
+        radioLabels.forEach(label => {
+            const radioInput = document.getElementById(label.getAttribute('for'));
 
-                    const defaultButton = document.createElement('button');
-                    defaultButton.className = 'mode-button default-mode-button';
-                    defaultButton.setAttribute('aria-label', 'Activer le mode par défaut');
-                    defaultButton.setAttribute('aria-pressed', this.currentMode === 'default');
-                    defaultButton.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM12 2v2m0 16v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M2 12h2m16 0h2M6.34 17.66l-1.42 1.42M19.08 4.92l-1.42 1.42"></path></svg>';
-                    defaultButton.addEventListener('click', () => this.setMode('default'));
+            // Supprimer les anciens gestionnaires pour éviter les doublons
+            label.removeEventListener('click', label._clickHandler);
+            label.removeEventListener('keydown', label._keydownHandler);
 
-                    modeSwitcher.appendChild(defaultButton);
-                    modeSwitcher.appendChild(darkButton);
-                    modeSwitcher.appendChild(colorblindButton);
-
-                    const headerContainer = document.querySelector('.site-header .container .row');
-                    if (headerContainer) {
-                        const modeCol = document.createElement('div');
-                        modeCol.className = 'col-auto ms-auto d-flex align-items-center';
-                        modeCol.appendChild(modeSwitcher);
-                        headerContainer.appendChild(modeCol);
-                    }
-
-                    const styleSheet = document.createElement('style');
-                    styleSheet.innerHTML = `
-                        .mode-switcher {
-                            display: flex;
-                            gap: 0.5rem;
-                            background: rgba(255, 255, 255, 0.1);
-                            padding: 0.5rem;
-                            border-radius: 2rem;
-                        }
-                        
-                        .mode-button {
-                            width: 2.5rem;
-                            height: 2.5rem;
-                            border-radius: 50%;
-                            border: none;
-                            background: transparent;
-                            color: white;
-                            cursor: pointer;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            transition: all 0.3s ease;
-                        }
-                        
-                        .mode-button:hover, 
-                        .mode-button:focus {
-                            background: rgba(255, 255, 255, 0.2);
-                            outline: none;
-                        }
-                        
-                        .mode-button[aria-pressed="true"] {
-                            background: rgba(255, 255, 255, 0.3);
-                            box-shadow: 0 0 0 2px white;
-                        }
-                        
-                        .dark-theme .mode-button {
-                            color: var(--text-color);
-                        }
-                        
-                        .dark-theme .mode-button[aria-pressed="true"] {
-                            background: rgba(0, 0, 0, 0.3);
-                            box-shadow: 0 0 0 2px var(--text-color);
-                        }
-                        
-                        .colorblind-mode .mode-button[aria-pressed="true"] {
-                            background: #ffcc00;
-                            color: #003366;
-                            box-shadow: 0 0 0 2px #003366;
-                        }
-                    `;
-                    document.head.appendChild(styleSheet);
-                },
-
-                updateModeButtons: function () {
-                    document.querySelectorAll('.mode-button').forEach(button => {
-                        const mode = button.classList.contains('dark-mode-button') ? 'dark' :
-                            button.classList.contains('colorblind-mode-button') ? 'colorblind' : 'default';
-                        button.setAttribute('aria-pressed', this.currentMode === mode);
-                    });
+            // Gestion du clic sur le label
+            label._clickHandler = function(e) {
+                e.preventDefault();
+                if (radioInput) {
+                    radioInput.checked = true;
+                    radioInput.dispatchEvent(new Event('change', { bubbles: true }));
                 }
             };
+            label.addEventListener('click', label._clickHandler);
 
-            // Initialiser le gestionnaire de modes
-            ModeManager.init();
-
-            // Fonction pour gérer le bouton "retour en haut"
-            function setupBackToTopButton() {
-                const backToTopButton = document.getElementById('back-to-top');
-
-                if (backToTopButton) {
-                    function toggleBackToTopButton() {
-                        if (window.scrollY > 300) {
-                            backToTopButton.classList.add('show');
-                        } else {
-                            backToTopButton.classList.remove('show');
-                        }
-                    }
-
-                    function handleTabNavigation(e) {
-                        const focusableElements = document.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex="0"]:not([tabindex="-1"])');
-                        const lastFocusableElement = focusableElements[focusableElements.length - 1];
-
-                        if (e.target === lastFocusableElement && !e.shiftKey && e.key === 'Tab') {
-                            setTimeout(() => {
-                                backToTopButton.focus();
-                            }, 10);
-                        }
-                    }
-
-                    backToTopButton.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        window.scrollTo({
-                            top: 0,
-                            behavior: 'smooth'
-                        });
-                        createAccessibleAnnouncement('Retour en haut de page effectué', 'polite');
-                        setTimeout(() => {
-                            document.querySelector('.skip-links a').focus();
-                        }, 500);
-                    });
-
-                    backToTopButton.addEventListener('keydown', function (e) {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault();
-                            this.click();
-                        }
-                    });
-
-                    window.addEventListener('scroll', toggleBackToTopButton);
-                    document.addEventListener('keydown', handleTabNavigation);
-                    toggleBackToTopButton();
-                }
-            }
-
-            // Zone pour les annonces dynamiques pour les lecteurs d'écran
-            if (!document.getElementById('screen-reader-announcements')) {
-                const announcementsArea = document.createElement('div');
-                announcementsArea.id = 'screen-reader-announcements';
-                announcementsArea.className = 'sr-only';
-                announcementsArea.setAttribute('aria-live', 'polite');
-                announcementsArea.setAttribute('aria-atomic', 'true');
-                document.body.appendChild(announcementsArea);
-            }
-
-            if (!document.getElementById('a11y-announcer-assertive')) {
-                const assertiveAnnouncer = document.createElement('div');
-                assertiveAnnouncer.id = 'a11y-announcer-assertive';
-                assertiveAnnouncer.setAttribute('aria-live', 'assertive');
-                assertiveAnnouncer.setAttribute('aria-atomic', 'true');
-                assertiveAnnouncer.className = 'sr-only';
-                document.body.appendChild(assertiveAnnouncer);
-            }
-
-            // Fonction pour créer des annonces accessibles
-            function createAccessibleAnnouncement(message, type = 'polite') {
-                let announcer = document.getElementById('a11y-announcer-' + type);
-
-                if (!announcer) {
-                    announcer = document.createElement('div');
-                    announcer.id = 'a11y-announcer-' + type;
-                    announcer.setAttribute('aria-live', type);
-                    announcer.setAttribute('aria-atomic', 'true');
-                    announcer.className = 'sr-only';
-                    document.body.appendChild(announcer);
+            // Gestion du clavier sur le label
+            label._keydownHandler = function(e) {
+                if (e.key === ' ' || e.key === 'Enter') {
+                    e.preventDefault();
+                    this.click();
                 }
 
-                announcer.textContent = '';
+                // Navigation avec les flèches dans le groupe radio
+                if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    const allLabelsInGroup = Array.from(document.querySelectorAll('label[for^="pref"]'));
+                    const currentIndex = allLabelsInGroup.indexOf(this);
+                    const nextLabel = allLabelsInGroup[currentIndex + 1] || allLabelsInGroup[0];
+                    if (nextLabel && nextLabel.hasAttribute('tabindex')) {
+                        nextLabel.focus();
+                        nextLabel.click();
+                    }
+                }
+
+                if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    const allLabelsInGroup = Array.from(document.querySelectorAll('label[for^="pref"]'));
+                    const currentIndex = allLabelsInGroup.indexOf(this);
+                    const prevLabel = allLabelsInGroup[currentIndex - 1] || allLabelsInGroup[allLabelsInGroup.length - 1];
+                    if (prevLabel && prevLabel.hasAttribute('tabindex')) {
+                        prevLabel.focus();
+                        prevLabel.click();
+                    }
+                }
+            };
+            label.addEventListener('keydown', label._keydownHandler);
+        });
+    }
+
+    // === GESTION DU FORMULAIRE ===
+    
+    // Fonction pour valider un champ avec gestion des messages d'erreur focalisables
+    function validateField(field) {
+        if (field.required && !field.validity.valid) {
+            field.classList.add('is-invalid');
+            const errorElement = document.getElementById(field.id + 'Error');
+            if (errorElement) {
+                let errorMessage = '';
+
+                if (field.validity.valueMissing) {
+                    errorMessage = 'Ce champ est obligatoire.';
+                } else if (field.validity.typeMismatch || field.validity.patternMismatch) {
+                    errorMessage = 'Veuillez entrer une valeur valide.';
+                }
+
+                errorElement.textContent = errorMessage;
+                // Rendre le message d'erreur focalisable
+                makeErrorMessageFocusable(errorElement, field.id);
+            }
+        } else {
+            field.classList.remove('is-invalid');
+            const errorElement = document.getElementById(field.id + 'Error');
+            if (errorElement) {
+                errorElement.textContent = '';
+                // Rendre le message d'erreur non-focalisable
+                makeErrorMessageNonFocusable(errorElement);
+            }
+        }
+    }
+
+    function setupContactForm() {
+        const form = document.getElementById('contactForm');
+        if (!form) return;
+
+        // Gestion de la soumission du formulaire
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let isValid = true;
+            const requiredFields = form.querySelectorAll('[required]');
+
+            // Nettoyer toutes les erreurs d'abord
+            requiredFields.forEach(field => {
+                field.classList.remove('is-invalid');
+                const errorElement = document.getElementById(field.id + 'Error');
+                if (errorElement) {
+                    errorElement.textContent = '';
+                    makeErrorMessageNonFocusable(errorElement);
+                }
+            });
+
+            // Valider tous les champs
+            requiredFields.forEach(field => {
+                if (!field.validity.valid) {
+                    isValid = false;
+                    validateField(field);
+                }
+            });
+
+            if (isValid) {
+                const successMessage = document.createElement('div');
+                successMessage.className = 'alert alert-success mt-3';
+                successMessage.setAttribute('role', 'alert');
+                successMessage.textContent = 'Merci pour votre message! Il serait envoyé si le formulaire était fonctionnel.';
+                form.parentNode.insertBefore(successMessage, form.nextSibling);
+
+                form.reset();
+                successMessage.setAttribute('tabindex', '-1');
+                successMessage.focus();
+                createAccessibleAnnouncement('Formulaire envoyé avec succès.', 'assertive');
+
                 setTimeout(() => {
-                    announcer.textContent = message;
-                }, 50);
-
-                if (type === 'assertive') {
-                    setTimeout(() => {
-                        announcer.textContent = '';
-                    }, 3000);
-                }
-            }
-
-            // Améliorer les liens d'évitement (skip links)
-            function enhanceSkipLinks() {
-                const skipLinks = document.querySelectorAll('.skip-links a');
-
-                skipLinks.forEach(link => {
-                    link.addEventListener('focus', function () {
-                        this.style.position = 'static';
-                        this.style.width = 'auto';
-                        this.style.height = 'auto';
-                        this.style.overflow = 'visible';
-                        this.style.clip = 'auto';
-                        this.style.whiteSpace = 'normal';
-                        this.style.backgroundColor = '#fff';
-                        this.style.color = '#000';
-                        this.style.padding = '1rem';
-                        this.style.zIndex = '9999';
-                        this.style.textDecoration = 'none';
-                        this.style.fontWeight = 'bold';
-                        this.style.border = '2px solid #000';
-                    });
-
-                    link.addEventListener('blur', function () {
-                        this.removeAttribute('style');
-                    });
-
-                    link.addEventListener('click', function (e) {
-                        const targetId = this.getAttribute('href').substring(1);
-                        const targetElement = document.getElementById(targetId);
-
-                        if (targetElement) {
-                            if (!targetElement.hasAttribute('tabindex')) {
-                                targetElement.setAttribute('tabindex', '-1');
-                            }
-                            targetElement.focus();
-                            createAccessibleAnnouncement('Navigation vers ' + (targetElement.getAttribute('aria-labelledby') || targetElement.textContent.trim()), 'polite');
-                        }
-                    });
-                });
-            }
-
-            // Améliorer l'accessibilité des images
-            function enhanceImageAccessibility() {
-                const images = document.querySelectorAll('img');
-
-                images.forEach(img => {
-                    if (!img.hasAttribute('alt')) {
-                        console.warn('Image sans attribut alt trouvée:', img);
-                        img.setAttribute('alt', '');
-                    }
-
-                    if (img.parentElement.tagName === 'FIGURE') {
-                        const figure = img.parentElement;
-                        const figcaption = figure.querySelector('figcaption');
-
-                        if (figcaption) {
-                            if (!figure.hasAttribute('role')) {
-                                figure.setAttribute('role', 'figure');
-                            }
-
-                            if (!figcaption.hasAttribute('id')) {
-                                const figcaptionId = 'figcaption-' + Math.random().toString(36).substring(2, 9);
-                                figcaption.setAttribute('id', figcaptionId);
-                                img.setAttribute('aria-describedby', figcaptionId);
-                            }
-                        }
-                    }
-
-                    if (img.getAttribute('alt') && img.getAttribute('alt') !== '') {
-                        if (!img.hasAttribute('tabindex')) {
-                            img.setAttribute('tabindex', '0');
-                        }
-
-                        img.addEventListener('focus', function () {
-                            createAccessibleAnnouncement('Image: ' + this.getAttribute('alt'), 'polite');
-                        });
-                    } else {
-                        img.removeAttribute('tabindex');
-                    }
-                });
-            }
-
-            // Améliorer l'accessibilité des tableaux
-            function enhanceTableAccessibility() {
-                const tables = document.querySelectorAll('table');
-
-                tables.forEach(table => {
-                    if (!table.querySelector('caption')) {
-                        console.warn('Tableau sans caption trouvé:', table);
-                    }
-
-                    const headers = table.querySelectorAll('th');
-                    headers.forEach(header => {
-                        if (!header.hasAttribute('scope')) {
-                            if (header.parentElement.tagName === 'THEAD' ||
-                                Array.from(header.parentElement.children).indexOf(header) === 0) {
-                                header.setAttribute('scope', header.parentElement.tagName === 'THEAD' ? 'col' : 'row');
-                            }
-                        }
-                    });
-
-                    if (!table.hasAttribute('tabindex')) {
-                        table.setAttribute('tabindex', '0');
-                    }
-                });
-            }
-
-            // Ajouter un indicateur de focus visible
-            function addFocusVisibility() {
-                const stylesheet = document.createElement('style');
-                stylesheet.innerHTML = `
-                    .js-focus-visible :focus:not(.focus-visible) {
-                        outline: none !important;
-                    }
-                    
-                    .js-focus-visible .focus-visible {
-                        outline: 3px solid #2196F3 !important;
-                        outline-offset: 2px !important;
-                    }
-                    
-                    [tabindex="0"] {
-                        cursor: pointer;
-                    }
-                `;
-                document.head.appendChild(stylesheet);
-
-                let isUsingKeyboard = false;
-
-                window.addEventListener('keydown', function (e) {
-                    if (e.key === 'Tab') {
-                        isUsingKeyboard = true;
-                        document.body.classList.add('keyboard-navigation');
-                    }
-                });
-
-                window.addEventListener('mousedown', function () {
-                    isUsingKeyboard = false;
-                    document.body.classList.remove('keyboard-navigation');
-                });
-
-                document.addEventListener('focusin', function (e) {
-                    if (isUsingKeyboard) {
-                        e.target.classList.add('focus-visible');
-                    }
-                });
-
-                document.addEventListener('focusout', function (e) {
-                    e.target.classList.remove('focus-visible');
-                });
-            }
-
-            // Gérer le formulaire de contact
-            const form = document.getElementById('contactForm');
-            if (form) {
-                form.addEventListener('submit', function (event) {
-                    event.preventDefault();
-
-                    let isValid = true;
-                    const requiredFields = form.querySelectorAll('[required]');
-
-                    requiredFields.forEach(field => {
-                        field.classList.remove('is-invalid');
-                        const errorElement = document.getElementById(field.id + 'Error');
-                        if (errorElement) {
-                            errorElement.textContent = '';
-                            errorElement.removeAttribute('tabindex');
-                        }
-                    });
-
-                    requiredFields.forEach(field => {
-                        if (!field.validity.valid) {
-                            isValid = false;
-                            field.classList.add('is-invalid');
-
-                            const errorElement = document.getElementById(field.id + 'Error');
-                            if (errorElement) {
-                                let errorMessage = '';
-
-                                if (field.validity.valueMissing) {
-                                    errorMessage = 'Ce champ est obligatoire.';
-                                } else if (field.validity.typeMismatch || field.validity.patternMismatch) {
-                                    errorMessage = 'Veuillez entrer une valeur valide.';
-                                }
-
-                                errorElement.textContent = errorMessage;
-                                if (errorMessage) {
-                                    errorElement.setAttribute('tabindex', '0');
-                                }
-                            }
-                        }
-                    });
-
-                    if (isValid) {
-                        const successMessage = document.createElement('div');
-                        successMessage.className = 'alert alert-success mt-3';
-                        successMessage.setAttribute('role', 'alert');
-                        successMessage.textContent = 'Merci pour votre message! Il serait envoyé si le formulaire était fonctionnel.';
-                        form.parentNode.insertBefore(successMessage, form.nextSibling);
-
-                        form.reset();
-                        successMessage.setAttribute('tabindex', '-1');
-                        successMessage.focus();
-                        createAccessibleAnnouncement('Formulaire envoyé avec succès.', 'assertive');
-
-                        setTimeout(() => {
-                            successMessage.remove();
-                        }, 5000);
-                    } else {
-                        const firstErrorElement = form.querySelector('.invalid-feedback[tabindex="0"]');
-                        if (firstErrorElement) {
-                            firstErrorElement.focus();
-                        }
-
-                        const errorArea = document.getElementById('form-errors');
-                        if (errorArea) {
-                            errorArea.textContent = 'Des erreurs ont été détectées dans le formulaire. Veuillez les corriger.';
-                        }
-
-                        createAccessibleAnnouncement('Des erreurs ont été détectées dans le formulaire. Veuillez les corriger.', 'assertive');
-                    }
-                });
-
-                const inputs = form.querySelectorAll('input, select, textarea');
-                inputs.forEach(input => {
-                    input.addEventListener('blur', function () {
-                        validateField(this);
-                    });
-
-                    input.addEventListener('input', function () {
-                        if (this.validity.valid) {
-                            const errorElement = document.getElementById(this.id + 'Error');
-                            if (errorElement) {
-                                errorElement.textContent = '';
-                                errorElement.removeAttribute('tabindex');
-                                this.classList.remove('is-invalid');
-                            }
-                        }
-                    });
-                });
-            }
-
-            function validateField(field) {
-                if (field.required && !field.validity.valid) {
-                    field.classList.add('is-invalid');
-                    const errorElement = document.getElementById(field.id + 'Error');
-                    if (errorElement) {
-                        let errorMessage = '';
-
-                        if (field.validity.valueMissing) {
-                            errorMessage = 'Ce champ est obligatoire.';
-                        } else if (field.validity.typeMismatch || field.validity.patternMismatch) {
-                            errorMessage = 'Veuillez entrer une valeur valide.';
-                        }
-
-                        errorElement.textContent = errorMessage;
-                        if (errorMessage) {
-                            errorElement.setAttribute('tabindex', '0');
-                        }
-                    }
-                }
-            }
-
-            // Amélioration de l'accessibilité pour les menus déroulants
-            // Amélioration de l'accessibilité pour les menus déroulants
-            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('keydown', function (e) {
-                    const dropdownMenu = this.nextElementSibling;
-
-                    if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
-                        e.preventDefault();
-                        this.click(); // Ouvre le menu
-
-                        // Focus sur le premier élément du menu si ouvert
-                        if (dropdownMenu.classList.contains('show')) {
-                            const firstItem = dropdownMenu.querySelector('.dropdown-item');
-                            if (firstItem) firstItem.focus();
-                        }
-                    }
-
-                    // Navigation avec les flèches
-                    if (dropdownMenu.classList.contains('show')) {
-                        const items = dropdownMenu.querySelectorAll('.dropdown-item');
-                        const currentItem = document.activeElement;
-
-                        if (e.key === 'ArrowDown') {
-                            e.preventDefault();
-                            const nextItem = currentItem === this ? items[0] :
-                                currentItem.nextElementSibling || items[0];
-                            nextItem.focus();
-                        }
-
-                        if (e.key === 'ArrowUp') {
-                            e.preventDefault();
-                            const prevItem = currentItem.previousElementSibling ||
-                                items[items.length - 1] || this;
-                            prevItem.focus();
-                        }
-
-                        if (e.key === 'Escape') {
-                            e.preventDefault();
-                            this.focus();
-                            this.click(); // Ferme le menu
-                        }
-                    }
-                });
-
-                toggle.setAttribute('aria-haspopup', 'true');
-
-                toggle.addEventListener('click', function () {
-                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                    this.setAttribute('aria-expanded', !isExpanded);
-                });
-            });
-
-            // Gestion des items du menu déroulant
-            document.querySelectorAll('.dropdown-item').forEach(item => {
-                item.addEventListener('keydown', function (e) {
-                    if (e.key === 'Tab') {
-                        const dropdown = this.closest('.dropdown');
-                        const toggle = dropdown.querySelector('.dropdown-toggle');
-                        toggle.click(); // Ferme le menu quand on tab hors du dropdown
-                    }
-                });
-            });
-
-            // Raccourcis clavier et navigation
-            window.addEventListener('keydown', function (e) {
-                if (e.altKey && e.key === '0') {
-                    e.preventDefault();
-                    const mainContent = document.getElementById('main-content');
-                    if (mainContent) {
-                        mainContent.setAttribute('tabindex', '-1');
-                        mainContent.focus();
-                        createAccessibleAnnouncement('Navigation vers le contenu principal');
-                    }
+                    successMessage.remove();
+                }, 5000);
+            } else {
+                // Focus sur le premier champ en erreur
+                const firstErrorField = form.querySelector('.is-invalid');
+                if (firstErrorField) {
+                    firstErrorField.focus();
                 }
 
-                if (e.altKey && e.key === '1') {
-                    e.preventDefault();
-                    const mainNav = document.querySelector('.main-nav');
-                    if (mainNav) {
-                        mainNav.setAttribute('tabindex', '-1');
-                        mainNav.focus();
-                        createAccessibleAnnouncement('Navigation vers le menu principal');
-                    }
-                }
-
-                if (e.altKey && e.key === '2') {
-                    e.preventDefault();
-                    const contactForm = document.getElementById('contactForm');
-                    if (contactForm) {
-                        contactForm.setAttribute('tabindex', '-1');
-                        contactForm.focus();
-                        createAccessibleAnnouncement('Navigation vers le formulaire de contact');
-                    }
-                }
-
-                if (e.key === 'Escape') {
-                    const openDropdowns = document.querySelectorAll('.dropdown-menu.show');
-                    if (openDropdowns.length > 0) {
-                        openDropdowns.forEach(dropdown => {
-                            const toggle = dropdown.previousElementSibling;
-                            if (toggle && toggle.classList.contains('dropdown-toggle')) {
-                                toggle.click();
-                            }
-                        });
-                    }
-                }
-            });
-
-            // Appeler toutes les fonctions d'amélioration d'accessibilité
-            setupBackToTopButton();
-            enhanceSkipLinks();
-            enhanceImageAccessibility();
-            enhanceTableAccessibility();
-            addFocusVisibility();
-
-            // Événement pour indiquer que toutes les améliorations d'accessibilité ont été appliquées
-            document.dispatchEvent(new CustomEvent('accessibilityEnhancementsApplied'));
-
-            // Annoncer l'accessibilité améliorée au chargement initial
-            setTimeout(() => {
-                createAccessibleAnnouncement(
-                    "Page chargée avec des fonctionnalités d'accessibilité améliorées. Utilisez Tab pour naviguer, Alt+0 pour aller au contenu principal, Alt+1 pour le menu, et Alt+2 pour le formulaire de contact.",
-                    'polite'
-                );
-            }, 1000);
+                createAccessibleAnnouncement('Des erreurs ont été détectées dans le formulaire. Veuillez les corriger.', 'assertive');
+            }
         });
 
-        // Amélioration de l'accessibilité pour les menus déroulants
-        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-        dropdownToggles.forEach(toggle => {
-            toggle.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
-                    e.preventDefault();
-                    const dropdownMenu = this.nextElementSibling;
-                    if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
-                        this.click(); // Ouvre le menu
+        // Validation en temps réel
+        const inputs = form.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function () {
+                validateField(this);
+            });
 
-                        // Focus sur le premier élément du menu si ouvert
-                        if (dropdownMenu.classList.contains('show')) {
-                            const firstItem = dropdownMenu.querySelector('.dropdown-item');
-                            if (firstItem) firstItem.focus();
-                        }
+            input.addEventListener('input', function () {
+                if (this.validity.valid) {
+                    const errorElement = document.getElementById(this.id + 'Error');
+                    if (errorElement && errorElement.textContent) {
+                        errorElement.textContent = '';
+                        makeErrorMessageNonFocusable(errorElement);
+                        this.classList.remove('is-invalid');
                     }
                 }
+            });
+        });
+
+        // Compteur de caractères pour le textarea
+        const messageTextarea = document.getElementById('message');
+        const messageCounter = document.getElementById('message-counter');
+        if (messageTextarea && messageCounter) {
+            messageTextarea.addEventListener('input', function() {
+                const length = this.value.length;
+                const maxLength = this.getAttribute('maxlength');
+                messageCounter.textContent = `${length} / ${maxLength} caractères`;
+            });
+        }
+    }
+
+    // === GESTIONNAIRE DES MODES D'AFFICHAGE ===
+    
+    const ModeManager = {
+        currentMode: 'default',
+        modes: {
+            'default': {
+                name: 'default',
+                activate: function () {
+                    document.body.classList.remove('dark-theme', 'colorblind-mode');
+                    localStorage.setItem('theme', 'light');
+                    localStorage.setItem('colorblind-mode', 'false');
+                    document.documentElement.style.setProperty('--primary-color', '#2062AA');
+                    document.documentElement.style.setProperty('--primary-dark', '#174B87');
+                }
+            },
+            'dark': {
+                name: 'dark',
+                activate: function () {
+                    document.body.classList.add('dark-theme');
+                    document.body.classList.remove('colorblind-mode');
+                    localStorage.setItem('theme', 'dark');
+                    localStorage.setItem('colorblind-mode', 'false');
+                }
+            },
+            'colorblind': {
+                name: 'colorblind',
+                activate: function () {
+                    document.body.classList.add('colorblind-mode');
+                    document.body.classList.remove('dark-theme');
+                    localStorage.setItem('colorblind-mode', 'true');
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+        },
+
+        init: function () {
+            const savedTheme = localStorage.getItem('theme');
+            const savedColorblind = localStorage.getItem('colorblind-mode');
+
+            this.modes['default'].activate();
+
+            if (savedColorblind === 'true') {
+                this.setMode('colorblind');
+            } else if (savedTheme === 'dark') {
+                this.setMode('dark');
+            }
+
+            this.createModeSwitcher();
+        },
+
+        setMode: function (modeName) {
+            if (this.modes[modeName]) {
+                this.currentMode = modeName;
+                this.modes[modeName].activate();
+                this.updateModeButtons();
+
+                const message = modeName === 'default'
+                    ? 'Mode par défaut activé'
+                    : `Mode ${modeName} activé`;
+                createAccessibleAnnouncement(message, 'polite');
+            }
+        },
+
+        createModeSwitcher: function () {
+            const modeSwitcher = document.createElement('div');
+            modeSwitcher.className = 'mode-switcher';
+            modeSwitcher.setAttribute('aria-label', 'Sélecteur de mode d\'affichage');
+
+            const defaultButton = document.createElement('button');
+            defaultButton.className = 'mode-button default-mode-button';
+            defaultButton.setAttribute('aria-label', 'Activer le mode par défaut');
+            defaultButton.setAttribute('aria-pressed', this.currentMode === 'default');
+            defaultButton.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM12 2v2m0 16v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M2 12h2m16 0h2M6.34 17.66l-1.42 1.42M19.08 4.92l-1.42 1.42"></path></svg>';
+            defaultButton.addEventListener('click', () => this.setMode('default'));
+
+            const darkButton = document.createElement('button');
+            darkButton.className = 'mode-button dark-mode-button';
+            darkButton.setAttribute('aria-label', 'Activer le mode sombre');
+            darkButton.setAttribute('aria-pressed', this.currentMode === 'dark');
+            darkButton.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"></path></svg>';
+            darkButton.addEventListener('click', () => this.setMode('dark'));
+
+            const colorblindButton = document.createElement('button');
+            colorblindButton.className = 'mode-button colorblind-mode-button';
+            colorblindButton.setAttribute('aria-label', 'Activer le mode adapté aux daltoniens');
+            colorblindButton.setAttribute('aria-pressed', this.currentMode === 'colorblind');
+            colorblindButton.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>';
+            colorblindButton.addEventListener('click', () => this.setMode('colorblind'));
+
+            modeSwitcher.appendChild(defaultButton);
+            modeSwitcher.appendChild(darkButton);
+            modeSwitcher.appendChild(colorblindButton);
+
+            const headerContainer = document.querySelector('.site-header .container .row');
+            if (headerContainer) {
+                const modeCol = document.createElement('div');
+                modeCol.className = 'col-auto ms-auto d-flex align-items-center';
+                modeCol.appendChild(modeSwitcher);
+                headerContainer.appendChild(modeCol);
+            }
+
+            this.addModeStyles();
+        },
+
+        addModeStyles: function() {
+            const styleSheet = document.createElement('style');
+            styleSheet.innerHTML = `
+                .mode-switcher {
+                    display: flex;
+                    gap: 0.5rem;
+                    background: rgba(255, 255, 255, 0.1);
+                    padding: 0.5rem;
+                    border-radius: 2rem;
+                }
+                
+                .mode-button {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border-radius: 50%;
+                    border: none;
+                    background: transparent;
+                    color: white;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.3s ease;
+                }
+                
+                .mode-button:hover, 
+                .mode-button:focus {
+                    background: rgba(255, 255, 255, 0.2);
+                    outline: none;
+                }
+                
+                .mode-button[aria-pressed="true"] {
+                    background: rgba(255, 255, 255, 0.3);
+                    box-shadow: 0 0 0 2px white;
+                }
+                
+                .dark-theme .mode-button {
+                    color: var(--text-color);
+                }
+                
+                .dark-theme .mode-button[aria-pressed="true"] {
+                    background: rgba(0, 0, 0, 0.3);
+                    box-shadow: 0 0 0 2px var(--text-color);
+                }
+                
+                .colorblind-mode .mode-button[aria-pressed="true"] {
+                    background: #ffcc00;
+                    color: #003366;
+                    box-shadow: 0 0 0 2px #003366;
+                }
+            `;
+            document.head.appendChild(styleSheet);
+        },
+
+        updateModeButtons: function () {
+            document.querySelectorAll('.mode-button').forEach(button => {
+                const mode = button.classList.contains('dark-mode-button') ? 'dark' :
+                    button.classList.contains('colorblind-mode-button') ? 'colorblind' : 'default';
+                button.setAttribute('aria-pressed', this.currentMode === mode);
+            });
+        }
+    };
+
+    // === BOUTON RETOUR EN HAUT ===
+    
+    function setupBackToTopButton() {
+        const backToTopButton = document.getElementById('back-to-top');
+        if (!backToTopButton) return;
+
+        function toggleBackToTopButton() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        }
+
+        backToTopButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            createAccessibleAnnouncement('Retour en haut de page effectué', 'polite');
+            setTimeout(() => {
+                const firstSkipLink = document.querySelector('.skip-links a');
+                if (firstSkipLink) firstSkipLink.focus();
+            }, 500);
+        });
+
+        backToTopButton.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+
+        window.addEventListener('scroll', toggleBackToTopButton);
+        toggleBackToTopButton();
+    }
+
+    // === NAVIGATION ET ACCESSIBILITÉ ===
+    
+    function enhanceSkipLinks() {
+        const skipLinks = document.querySelectorAll('.skip-links a');
+
+        skipLinks.forEach(link => {
+            // Supprimer les anciens gestionnaires pour éviter les doublons
+            link.removeEventListener('click', link._clickHandler);
+
+            link._clickHandler = function(e) {
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    if (!targetElement.hasAttribute('tabindex')) {
+                        targetElement.setAttribute('tabindex', '-1');
+                    }
+                    targetElement.focus();
+                    createAccessibleAnnouncement('Navigation vers ' + (targetElement.getAttribute('aria-labelledby') || targetElement.textContent.trim()), 'polite');
+                }
+            };
+            link.addEventListener('click', link._clickHandler);
+        });
+    }
+
+    function enhanceDropdownMenus() {
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            const menu = dropdown.querySelector('.dropdown-menu');
+            
+            if (!toggle || !menu) return;
+
+            // Supprimer les anciens gestionnaires
+            toggle.removeEventListener('keydown', toggle._keydownHandler);
+
+            // Gestion du clavier pour le toggle
+            toggle._keydownHandler = function(e) {
+                if (e.key === ' ' || e.key === 'Enter' || e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    this.click();
+
+                    if (menu.classList.contains('show')) {
+                        const firstItem = menu.querySelector('.dropdown-item');
+                        if (firstItem) firstItem.focus();
+                    }
+                }
+            };
+            toggle.addEventListener('keydown', toggle._keydownHandler);
+
+            // Gestion des items du menu
+            const items = menu.querySelectorAll('.dropdown-item');
+            items.forEach((item, index) => {
+                // Supprimer les anciens gestionnaires
+                item.removeEventListener('keydown', item._keydownHandler);
+
+                item._keydownHandler = function(e) {
+                    if (e.key === 'ArrowDown') {
+                        e.preventDefault();
+                        const nextItem = items[index + 1] || items[0];
+                        nextItem.focus();
+                    }
+
+                    if (e.key === 'ArrowUp') {
+                        e.preventDefault();
+                        const prevItem = items[index - 1] || items[items.length - 1];
+                        prevItem.focus();
+                    }
+
+                    if (e.key === 'Escape') {
+                        e.preventDefault();
+                        toggle.focus();
+                        toggle.click();
+                    }
+
+                    if (e.key === 'Tab') {
+                        toggle.click();
+                    }
+                };
+                item.addEventListener('keydown', item._keydownHandler);
             });
 
             toggle.setAttribute('aria-haspopup', 'true');
         });
+    }
 
-        // Gestion améliorée des menus déroulants
-document.querySelectorAll('.dropdown').forEach(dropdown => {
-    const toggle = dropdown.querySelector('.dropdown-toggle');
-    const menu = dropdown.querySelector('.dropdown-menu');
-    
-    // Gestion du clavier
-    toggle.addEventListener('keydown', function(e) {
-        // Espace/Entrée/Flèche bas pour ouvrir
-        if (e.key === ' ' || e.key === 'Enter' || e.key === 'ArrowDown') {
-            e.preventDefault();
-            this.click(); // Ouvre/ferme le menu
-            
-            // Si le menu s'ouvre, focus sur le premier élément
-            if (menu.classList.contains('show')) {
-                const firstItem = menu.querySelector('.dropdown-item');
-                if (firstItem) firstItem.focus();
-            }
-        }
-        
-        // Tabulation pour naviguer normalement
-        if (e.key === 'Tab') {
-            if (menu.classList.contains('show')) {
-                const firstItem = menu.querySelector('.dropdown-item');
-                if (firstItem) firstItem.focus();
-                e.preventDefault();
-            }
-        }
-    });
-    
-    // Gestion des items du menu
-    const items = menu.querySelectorAll('.dropdown-item');
-    items.forEach(item => {
-        item.addEventListener('keydown', function(e) {
-            // Flèche bas pour l'élément suivant
-            if (e.key === 'ArrowDown') {
-                e.preventDefault();
-                const nextItem = this.nextElementSibling || items[0];
-                nextItem.focus();
-            }
-            
-            // Flèche haut pour l'élément précédent
-            if (e.key === 'ArrowUp') {
-                e.preventDefault();
-                const prevItem = this.previousElementSibling || items[items.length - 1];
-                prevItem.focus();
-            }
-            
-            // Échap pour fermer le menu
-            if (e.key === 'Escape') {
-                e.preventDefault();
-                toggle.focus();
-                toggle.click(); // Ferme le menu
-            }
-            
-            // Tab pour fermer le menu
+    function addFocusVisibility() {
+        // Gestion du focus visible uniquement avec le clavier
+        window.addEventListener('keydown', function (e) {
             if (e.key === 'Tab') {
-                toggle.click(); // Ferme le menu
+                isUsingKeyboard = true;
+                document.body.classList.add('keyboard-navigation');
             }
         });
-    });
+
+        window.addEventListener('mousedown', function () {
+            isUsingKeyboard = false;
+            document.body.classList.remove('keyboard-navigation');
+        });
+
+        document.addEventListener('focusin', function (e) {
+            if (isUsingKeyboard) {
+                e.target.classList.add('focus-visible');
+            }
+        });
+
+        document.addEventListener('focusout', function (e) {
+            e.target.classList.remove('focus-visible');
+        });
+    }
+
+    function enhanceImageAccessibility() {
+        const images = document.querySelectorAll('img');
+
+        images.forEach(img => {
+            if (!img.hasAttribute('alt')) {
+                console.warn('Image sans attribut alt trouvée:', img);
+                img.setAttribute('alt', '');
+            }
+
+            if (img.parentElement.tagName === 'FIGURE') {
+                const figure = img.parentElement;
+                const figcaption = figure.querySelector('figcaption');
+
+                if (figcaption) {
+                    if (!figure.hasAttribute('role')) {
+                        figure.setAttribute('role', 'figure');
+                    }
+
+                    if (!figcaption.hasAttribute('id')) {
+                        const figcaptionId = 'figcaption-' + Math.random().toString(36).substring(2, 9);
+                        figcaption.setAttribute('id', figcaptionId);
+                        img.setAttribute('aria-describedby', figcaptionId);
+                    }
+                }
+            }
+
+            if (img.getAttribute('alt') && img.getAttribute('alt') !== '') {
+                if (!img.hasAttribute('tabindex')) {
+                    img.setAttribute('tabindex', '0');
+                }
+
+                // Supprimer l'ancien gestionnaire s'il existe
+                img.removeEventListener('focus', img._focusHandler);
+                
+                img._focusHandler = function() {
+                    createAccessibleAnnouncement('Image: ' + this.getAttribute('alt'), 'polite');
+                };
+                img.addEventListener('focus', img._focusHandler);
+            } else {
+                img.removeAttribute('tabindex');
+            }
+        });
+    }
+
+    function enhanceTableAccessibility() {
+        const tables = document.querySelectorAll('table');
+
+        tables.forEach(table => {
+            if (!table.querySelector('caption')) {
+                console.warn('Tableau sans caption trouvé:', table);
+            }
+
+            const headers = table.querySelectorAll('th');
+            headers.forEach(header => {
+                if (!header.hasAttribute('scope')) {
+                    if (header.parentElement.tagName === 'THEAD' ||
+                        Array.from(header.parentElement.children).indexOf(header) === 0) {
+                        header.setAttribute('scope', header.parentElement.tagName === 'THEAD' ? 'col' : 'row');
+                    }
+                }
+            });
+
+            if (!table.hasAttribute('tabindex')) {
+                table.setAttribute('tabindex', '0');
+            }
+        });
+    }
+
+    // === RACCOURCIS CLAVIER GLOBAUX ===
+    
+    function setupGlobalKeyboardShortcuts() {
+        window.addEventListener('keydown', function (e) {
+            // Alt + 0 : Aller au contenu principal
+            if (e.altKey && e.key === '0') {
+                e.preventDefault();
+                const mainContent = document.getElementById('main-content');
+                if (mainContent) {
+                    mainContent.setAttribute('tabindex', '-1');
+                    mainContent.focus();
+                    createAccessibleAnnouncement('Navigation vers le contenu principal');
+                }
+            }
+
+            // Alt + 1 : Aller au menu principal
+            if (e.altKey && e.key === '1') {
+                e.preventDefault();
+                const mainNav = document.querySelector('.main-nav');
+                if (mainNav) {
+                    mainNav.setAttribute('tabindex', '-1');
+                    mainNav.focus();
+                    createAccessibleAnnouncement('Navigation vers le menu principal');
+                }
+            }
+
+            // Alt + 2 : Aller au formulaire de contact
+            if (e.altKey && e.key === '2') {
+                e.preventDefault();
+                const contactForm = document.getElementById('contactForm');
+                if (contactForm) {
+                    contactForm.setAttribute('tabindex', '-1');
+                    contactForm.focus();
+                    createAccessibleAnnouncement('Navigation vers le formulaire de contact');
+                }
+            }
+
+            // Escape : Fermer les menus déroulants
+            if (e.key === 'Escape') {
+                const openDropdowns = document.querySelectorAll('.dropdown-menu.show');
+                if (openDropdowns.length > 0) {
+                    openDropdowns.forEach(dropdown => {
+                        const toggle = dropdown.previousElementSibling;
+                        if (toggle && toggle.classList.contains('dropdown-toggle')) {
+                            toggle.click();
+                        }
+                    });
+                }
+            }
+        });
+    }
+
+    // === INITIALISATION ===
+    
+    function init() {
+        // Créer les zones d'annonces
+        createAnnouncementAreas();
+
+        // Initialiser tous les modules
+        setupRadioButtons();
+        setupContactForm();
+        ModeManager.init();
+        setupBackToTopButton();
+        enhanceSkipLinks();
+        enhanceDropdownMenus();
+        addFocusVisibility();
+        enhanceImageAccessibility();
+        enhanceTableAccessibility();
+        setupGlobalKeyboardShortcuts();
+
+        // Annoncer que la page est prête
+        setTimeout(() => {
+            createAccessibleAnnouncement(
+                "Page chargée avec des fonctionnalités d'accessibilité améliorées. Utilisez Tab pour naviguer, Alt+0 pour aller au contenu principal, Alt+1 pour le menu, et Alt+2 pour le formulaire de contact.",
+                'polite'
+            );
+        }, 1000);
+
+        // Événement pour indiquer que toutes les améliorations d'accessibilité ont été appliquées
+        document.dispatchEvent(new CustomEvent('accessibilityEnhancementsApplied'));
+    }
+
+    // Lancer l'initialisation
+    init();
 });
     </script>
